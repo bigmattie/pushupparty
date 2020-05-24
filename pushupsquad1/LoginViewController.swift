@@ -22,9 +22,13 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         //Hide facebook button
-        
+        #if DEBUG
+        facebookLoginButton.isHidden = false
+        appleLoginButton.isHidden = false
+        #else
         facebookLoginButton.isHidden = true
         appleLoginButton.isHidden = true
+        #endif
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
                   if user == nil {
                     
