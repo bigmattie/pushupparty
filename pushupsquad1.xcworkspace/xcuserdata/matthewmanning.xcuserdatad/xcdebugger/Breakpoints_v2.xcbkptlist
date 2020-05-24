@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D4E77EB8-F433-49A5-81EA-EF06543E4B58"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "465B06A4-7F9D-4336-BC3C-95AE46B7144B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pushupsquad1/StatsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "371DA8C8-2C21-4996-85B2-6FB82BB9D65B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pushupsquad1/StatsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "StatsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "371DA8C8-2C21-4996-85B2-6FB82BB9D65B - 869a83ffd179814b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PushupParty.StatsViewController.db.getter : __C.FIRFirestore"
+                  moduleName = "PushupParty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewmanning/Downloads/pushupsquad1/pushupsquad1/StatsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "371DA8C8-2C21-4996-85B2-6FB82BB9D65B - 6d33f7399fb75ca4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PushupParty.StatsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PushupParty.StatsViewController"
+                  moduleName = "PushupParty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewmanning/Downloads/pushupsquad1/pushupsquad1/StatsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "2208">
+               </Location>
+               <Location
+                  uuid = "371DA8C8-2C21-4996-85B2-6FB82BB9D65B - f893921f257ddea3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PushupParty.StatsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PushupParty.StatsViewController&gt;"
+                  moduleName = "PushupParty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matthewmanning/Downloads/pushupsquad1/pushupsquad1/StatsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "2156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

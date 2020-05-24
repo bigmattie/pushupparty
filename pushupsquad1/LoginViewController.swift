@@ -11,8 +11,11 @@ import FBSDKLoginKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var facebookLoginButton: UIButton!
+    
     var handle: AuthStateDidChangeListenerHandle?
+    
+    @IBOutlet weak var facebookLoginButton: UIButton!
+    @IBOutlet weak var appleLoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,7 @@ class LoginViewController: UIViewController {
         //Hide facebook button
         
         facebookLoginButton.isHidden = true
-        
+        appleLoginButton.isHidden = true
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
                   if user == nil {
                     
@@ -60,6 +63,7 @@ class LoginViewController: UIViewController {
         showGuestLoginActionSheet()
     }
     
+
     @IBAction func facebookLogin(_ sender: Any) {
         LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
           if let error = error {
@@ -94,7 +98,10 @@ class LoginViewController: UIViewController {
         
     }
     
-
+    @IBAction func appleLogin(_ sender: Any) {
+        print("Apple Login")
+    }
+    
     
     /*
     // MARK: - Navigation

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BE4-3N-6xl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="3cw-rb-EGB">
+            <objects>
+                <viewController id="lh4-NB-nTZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UEc-on-L9G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="YED-Vu-rJj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N9l-Kv-s57"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OvS-l4-DLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="927.45535714285711"/>
+        </scene>
+        <!--Challenges-->
+        <scene sceneID="1bS-pj-YdH">
+            <objects>
+                <viewController title="Challenges" id="BE4-3N-6xl" customClass="AwardsViewController" customModule="Pushup_Party" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3DA-GA-lfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily challenges and head to head competitions " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h87-Er-aaQ">
+                                <rect key="frame" x="15" y="54" width="384" height="161.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soon you'll be able to do pushups with a friend and compete agianst yourself with daily challenges" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzB-lI-EIm">
+                                <rect key="frame" x="20" y="225.5" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1kH-mp-o9V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWK-Ve-e9U">
+                                <rect key="frame" x="20" y="742" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bUD-sj-oHd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Browse Daily Challenges">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedBrowseDaily:" destination="BE4-3N-6xl" eventType="touchUpInside" id="AGg-Oi-kSi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-Lr-BBo">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.73465865850000001" green="0.73151814940000004" blue="0.73137205839999997" alpha="0.23376980629999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yPG-F4-PvO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Invite a Friend">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedInviteFriend:" destination="BE4-3N-6xl" eventType="touchUpInside" id="6BH-Jc-WYe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="C2y-gB-Pdm" firstAttribute="trailing" secondItem="6Yd-Lr-BBo" secondAttribute="trailing" constant="20" id="E89-qq-Mjl"/>
+                            <constraint firstItem="rWK-Ve-e9U" firstAttribute="leading" secondItem="C2y-gB-Pdm" secondAttribute="leading" constant="20" id="NNv-Ce-QjO"/>
+                            <constraint firstItem="h87-Er-aaQ" firstAttribute="top" secondItem="C2y-gB-Pdm" secondAttribute="top" constant="10" id="PzF-R7-78d"/>
+                            <constraint firstItem="6Yd-Lr-BBo" firstAttribute="top" secondItem="rWK-Ve-e9U" secondAttribute="bottom" constant="20" id="W1g-VY-aVE"/>
+                            <constraint firstItem="C2y-gB-Pdm" firstAttribute="bottom" secondItem="6Yd-Lr-BBo" secondAttribute="bottom" constant="20" id="dYg-C8-Yyg"/>
+                            <constraint firstItem="6Yd-Lr-BBo" firstAttribute="leading" secondItem="C2y-gB-Pdm" secondAttribute="leading" constant="20" id="gWr-KQ-zYK"/>
+                            <constraint firstItem="C2y-gB-Pdm" firstAttribute="trailing" secondItem="EzB-lI-EIm" secondAttribute="trailing" constant="20" id="jLs-0L-Lg7"/>
+                            <constraint firstItem="EzB-lI-EIm" firstAttribute="leading" secondItem="C2y-gB-Pdm" secondAttribute="leading" constant="20" id="tXH-8P-J45"/>
+                            <constraint firstItem="EzB-lI-EIm" firstAttribute="top" secondItem="h87-Er-aaQ" secondAttribute="bottom" constant="10" id="uXC-96-LMO"/>
+                            <constraint firstItem="C2y-gB-Pdm" firstAttribute="trailing" secondItem="h87-Er-aaQ" secondAttribute="trailing" constant="15" id="vLx-so-NzD"/>
+                            <constraint firstItem="C2y-gB-Pdm" firstAttribute="trailing" secondItem="rWK-Ve-e9U" secondAttribute="trailing" constant="20" id="xT0-ZL-S5j"/>
+                            <constraint firstItem="h87-Er-aaQ" firstAttribute="leading" secondItem="C2y-gB-Pdm" secondAttribute="leading" constant="15" id="xo2-eG-27B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C2y-gB-Pdm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0y-3B-ttk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="938.83928571428567"/>
+        </scene>
+    </scenes>
+</document>
