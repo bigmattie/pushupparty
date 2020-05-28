@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1908B7F7247F0C8E00E37069 /* StatsView.storyboard */; };
+		1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7F9247F329600E37069 /* TimeExtensions.swift */; };
 		190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41EE245E1206009A9C79 /* AppDelegate.swift */; };
 		190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F0245E1206009A9C79 /* SceneDelegate.swift */; };
 		190A41F3245E1206009A9C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F2245E1206009A9C79 /* ViewController.swift */; };
@@ -29,12 +31,18 @@
 		191939AB246F07DB008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 191939A9246F07DA008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG */; };
 		191939AD246F46A9008FE2AE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191939AC246F46A9008FE2AE /* UIImageExtension.swift */; };
 		191939B8246F54D4008FE2AE /* magenta.gif in Resources */ = {isa = PBXBuildFile; fileRef = 191939B7246F54D1008FE2AE /* magenta.gif */; };
+		196C5BB2247C5ADC0031A182 /* CustomUIButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */; };
+		196C5BB4247C6CBC0031A182 /* CustomProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C5BB3247C6CBC0031A182 /* CustomProgessBar.swift */; };
+		196C5BB8247DD4620031A182 /* pushupDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 196C5BB7247DD45F0031A182 /* pushupDemo.gif */; };
+		196C5BBA247DD8290031A182 /* swirl.gif in Resources */ = {isa = PBXBuildFile; fileRef = 196C5BB9247DD8290031A182 /* swirl.gif */; };
 		197043662478868500305AAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 197043652478868500305AAE /* GoogleService-Info.plist */; };
 		19D20C79246624D4004D9E92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D20C78246624D3004D9E92 /* LoginViewController.swift */; };
 		70D9043A6A67DFA5DF20BEBB /* Pods_pushupsquad1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19D585189376389ECAB6447 /* Pods_pushupsquad1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1908B7F7247F0C8E00E37069 /* StatsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatsView.storyboard; sourceTree = "<group>"; };
+		1908B7F9247F329600E37069 /* TimeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeExtensions.swift; sourceTree = "<group>"; };
 		190A41EB245E1206009A9C79 /* Pushup Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pushup Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		190A41EE245E1206009A9C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		190A41F0245E1206009A9C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,10 @@
 		191939A9246F07DA008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG"; path = "../../A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG"; sourceTree = "<group>"; };
 		191939AC246F46A9008FE2AE /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		191939B7246F54D1008FE2AE /* magenta.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = magenta.gif; path = ../../magenta.gif; sourceTree = "<group>"; };
+		196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButtom.swift; sourceTree = "<group>"; };
+		196C5BB3247C6CBC0031A182 /* CustomProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgessBar.swift; sourceTree = "<group>"; };
+		196C5BB7247DD45F0031A182 /* pushupDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushupDemo.gif; path = ../../pushupDemo.gif; sourceTree = "<group>"; };
+		196C5BB9247DD8290031A182 /* swirl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = swirl.gif; path = ../../swirl.gif; sourceTree = "<group>"; };
 		197043652478868500305AAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19D20C78246624D3004D9E92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84F202D01D8A4961C28A0F7D /* Pods-pushupsquad1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushupsquad1.release.xcconfig"; path = "Target Support Files/Pods-pushupsquad1/Pods-pushupsquad1.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +120,7 @@
 		190A41ED245E1206009A9C79 /* pushupsquad1 */ = {
 			isa = PBXGroup;
 			children = (
+				196C5BAE247C3A180031A182 /* Custom Classes */,
 				190A42242464F865009A9C79 /* ProfileViewController.swift */,
 				191939B1246F4A0B008FE2AE /* Storyboards */,
 				191939B0246F49DE008FE2AE /* Custom Extensions */,
@@ -121,6 +134,8 @@
 				191399DA246643FD0081F99F /* TabViewController.swift */,
 				19167AB8247A23A7002F33EE /* 1024.png */,
 				19D20C78246624D3004D9E92 /* LoginViewController.swift */,
+				196C5BB9247DD8290031A182 /* swirl.gif */,
+				196C5BB7247DD45F0031A182 /* pushupDemo.gif */,
 				197043652478868500305AAE /* GoogleService-Info.plist */,
 				190A41F7245E121B009A9C79 /* Assets.xcassets */,
 				191939B7246F54D1008FE2AE /* magenta.gif */,
@@ -137,6 +152,7 @@
 			children = (
 				191939AC246F46A9008FE2AE /* UIImageExtension.swift */,
 				19193996246B3FFE008FE2AE /* DateExtensions.swift */,
+				1908B7F9247F329600E37069 /* TimeExtensions.swift */,
 			);
 			path = "Custom Extensions";
 			sourceTree = "<group>";
@@ -146,11 +162,21 @@
 			children = (
 				190A41F4245E1206009A9C79 /* Main.storyboard */,
 				191939A6246E21E8008FE2AE /* Stats.storyboard */,
+				1908B7F7247F0C8E00E37069 /* StatsView.storyboard */,
 				1919399B246C7991008FE2AE /* PushupCounter.storyboard */,
 				190A41F9245E121B009A9C79 /* LaunchScreen.storyboard */,
 				191939A1246E1B90008FE2AE /* Challenges.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		196C5BAE247C3A180031A182 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */,
+				196C5BB3247C6CBC0031A182 /* CustomProgessBar.swift */,
+			);
+			path = "Custom Classes";
 			sourceTree = "<group>";
 		};
 		7B1C726A80CF0296BD9D36AA /* Frameworks */ = {
@@ -228,13 +254,16 @@
 				191939A3246E1B91008FE2AE /* Challenges.storyboard in Resources */,
 				1919399C246C7992008FE2AE /* PushupCounter.storyboard in Resources */,
 				190A41F8245E121B009A9C79 /* Assets.xcassets in Resources */,
+				196C5BB8247DD4620031A182 /* pushupDemo.gif in Resources */,
 				191939A0246CDAFF008FE2AE /* 149-1491934_fitness-test-women-working-out-black-and-white.png in Resources */,
+				1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */,
 				19193995246A3478008FE2AE /* confetti.png in Resources */,
 				191939B8246F54D4008FE2AE /* magenta.gif in Resources */,
 				191939A5246E1EE7008FE2AE /* 88-886971_clip-art-push-up-silhouette-black-women-working.png in Resources */,
 				19167AB9247A23A7002F33EE /* 1024.png in Resources */,
 				190A41F6245E1206009A9C79 /* Main.storyboard in Resources */,
 				191939AB246F07DB008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG in Resources */,
+				196C5BBA247DD8290031A182 /* swirl.gif in Resources */,
 				197043662478868500305AAE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,11 +338,14 @@
 				19D20C79246624D4004D9E92 /* LoginViewController.swift in Sources */,
 				190A41F3245E1206009A9C79 /* ViewController.swift in Sources */,
 				191939AD246F46A9008FE2AE /* UIImageExtension.swift in Sources */,
+				196C5BB4247C6CBC0031A182 /* CustomProgessBar.swift in Sources */,
 				190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */,
+				196C5BB2247C5ADC0031A182 /* CustomUIButtom.swift in Sources */,
 				190A42252464F865009A9C79 /* ProfileViewController.swift in Sources */,
 				19193997246B3FFE008FE2AE /* DateExtensions.swift in Sources */,
 				190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */,
 				190A42292464FCF5009A9C79 /* StatsViewController.swift in Sources */,
+				1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */,
 				190A42272464FBBD009A9C79 /* AwardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
 				INFOPLIST_FILE = pushupsquad1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -476,11 +508,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushup.party;
 				PRODUCT_NAME = "Pushup Party";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -490,7 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
 				INFOPLIST_FILE = pushupsquad1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -498,11 +530,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushup.party;
 				PRODUCT_NAME = "Pushup Party";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

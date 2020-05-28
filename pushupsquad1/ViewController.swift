@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var helpBarButton: UIBarButtonItem!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var segmentControlModes: UISegmentedControl!
+    @IBOutlet weak var optionSelectedText: UILabel!
+    @IBOutlet weak var demoGif: UIImageView!
     
     var counter = 0.0
     var timer = Timer()
@@ -33,6 +36,8 @@ class ViewController: UIViewController {
     var oldPushups = 0
     var allPushups = 0
     var allPushupsTime = 0
+    var doneBarButton: UIBarButtonItem!
+    var selectedMode = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +54,19 @@ class ViewController: UIViewController {
         counter = 0.0
         allPushupsTime = 0
         allPushups = 0
+        selectedMode = 0
+        
+        
+        let jeremyGif: UIImage = UIImage.gifImageWithName("pushupDemo")!
+        demoGif.image = jeremyGif
+        
+        
+        optionSelectedText.text = "Normal Mode: as many pushups as you want"
         // Proximity Sensor Listener
         NotificationCenter.default.addObserver(self, selector: #selector(proximityChanged), name: UIDevice.proximityStateDidChangeNotification, object: nil)
         
-        //Timer
-        timeLabel.text = String(counter)
+        //Set Timer inital Value
+        timeLabel.text = secondsToHoursMinutesSeconds(seconds: Int(counter))
         
         //prevent swipe down
         isModalInPresentation = true
@@ -71,13 +84,20 @@ class ViewController: UIViewController {
         UIDevice.current.isProximityMonitoringEnabled = true
         finishButton.isHidden = false
         startButton.isHidden = true
-        quitBarButton.accessibilityElementsHidden = true
-        
+        //        quitBarButton.accessibilityElementsHidden = true
+        self.navigationItem.leftBarButtonItem = nil
+        segmentControlModes.isEnabled = false //disables the segment control to disable specific segmanets do this => segmentControlModes.setEnabled(false, forSegmentAt: 0)
+         demoGif.isHidden = true
+//        UIView.transition(with: demoGif, duration: 0.04,
+//                          options: .showHideTransitionViews,
+//            animations: {
+//                self.demoGif.isHidden = true
+//        })
         //Timer
         if(isPlaying) {
             return
         }
-        
+        //calls timer and UpdateTimer() function to increase by.1
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
         isPlaying = true
         
@@ -107,17 +127,28 @@ class ViewController: UIViewController {
     //Finish Button
     @IBAction func finishTapped(_ sender: Any) {
         NSLog("End session")
-        dismissButton.isHidden = false
-        UIDevice.current.isProximityMonitoringEnabled = false
+        
+        UIDevice.current.isProximityMonitoringEnabled = false //turn off  proximity sensor
+        timer.invalidate() //stop time
+        isPlaying = false //stop playing
+        
+        //Hide Buttons
         finishButton.isHidden = true
+        dismissButton.isHidden = false
+        self.navigationItem.rightBarButtonItem = nil
+        demoGif.isHidden = true
+        //show Done Button
+        let button1 = UIBarButtonItem(title:"Done", style: .plain, target: self,  action: #selector(dismissButtonTapped(_:))) // action:#selector(Class.MethodName) for swift 3
+        self.navigationItem.rightBarButtonItem  = button1
+        //        doneBarButton.title = "Done"
+        //        self.navigationItem.rightBarButtonItem = doneBarButton
         
         //        startButton.isHidden = false
-        timer.invalidate()
-        isPlaying = false
+        
         //grab current user info from firbease
         let user = Auth.auth().currentUser
         let uid = user?.uid ?? " " //get uid from firebase
-        let displayName = user?.displayName ?? "! "
+        let displayName = user?.displayName ?? "!"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-YYYY"
         let dateString = dateFormatter.string(from: Date())
@@ -134,7 +165,9 @@ class ViewController: UIViewController {
             
             print("SAVED ", self.newPushups, "for ", dateString)
             //if session sucessfully saved then get current all time pushups/time number
-            self.topLabel.text = "Congrats" + displayName.components(separatedBy: " ")[0] + "! you just completed " + String(self.newPushups) + " Pushups in " + String(format: "%.1f", self.counter) + " seconds."
+            self.optionSelectedText.text = "Congrats " +
+                displayName.components(separatedBy: " ")[0] +
+                "! You just completed " + String(self.newPushups) + " Pushups in " + secondsToHoursMinutesSeconds(seconds: Int(self.counter)) + "."
             
             }
         }
@@ -156,10 +189,86 @@ class ViewController: UIViewController {
     //Help Button
     @IBAction func helpButtonTapped(_ sender: Any) {
         
-        let alert = UIAlertController(title: "How does it work?", message: "Place your phone under your chest, perform a pushup.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "How does it work?", message: "Place your phone under your chest, press start, then perform a pushup", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style:.cancel, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    //Segemented Controls (Pushup Options)
+    
+    @IBAction func segmentChanged(_ sender: Any) {
+        
+        switch segmentControlModes.selectedSegmentIndex
+        {
+        case 0:
+            optionSelectedText.text = "As many pushups as you want"
+            selectedMode = 0
+        case 1:
+            optionSelectedText.text = "50 Pushups as fast as you can"
+            selectedMode = 1
+        case 2:
+            optionSelectedText.text = "As many pushups as you can in 60 sec"
+            selectedMode = 2
+        default:
+            optionSelectedText.text = "As many pushups as you want"
+            selectedMode = 0
+        }
+    }
+    
+    //Proximity Sensor Logic
+    @objc func proximityChanged(notification:NSNotification)
+    {
+        //if user is close...goes down for pushup
+        if UIDevice.current.proximityState {
+            //Logic for different modes from segmented options picker
+            
+            if (selectedMode == 0) {
+                //Normal - Mode 0
+                let currentPushups = numberOfPushups.text ?? "0"
+                newPushups = (Int(currentPushups) ?? 0) + 1
+                numberOfPushups.text = String(newPushups)
+            } else if (selectedMode == 1) {
+                //Mode 1
+                let currentPushups = numberOfPushups.text ?? "0"
+                newPushups = (Int(currentPushups) ?? 0) + 1
+                numberOfPushups.text = String(newPushups)
+                if (newPushups == 50) {
+                    finishTapped(self)
+                }
+            } else if (selectedMode == 2) {
+                //Mode 2
+                let currentPushups = numberOfPushups.text ?? "0"
+                newPushups = (Int(currentPushups) ?? 0) + 1
+                numberOfPushups.text = String(newPushups)
+                print("COUNTER", counter)
+                if (counter >= 60) {
+                    finishTapped(self)
+                }
+                
+            }
+            //Action on each pushup counted
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        } else {
+            // NSLog("Proximity false")
+            
+        }
+    }
+    
+    //Timer
+    @objc func UpdateTimer() {
+        counter = counter + 0.1
+        timeLabel.text = secondsToHoursMinutesSeconds(seconds: Int(counter))
+        if (selectedMode == 2) {
+            if (counter >= 60) {
+                finishTapped(self)
+            }
+            
+        }
+    }
+    
+    //Remove constraints
+    func adjustConstraints() {
+        
     }
     
     //Set Celebration background
@@ -175,71 +284,6 @@ class ViewController: UIViewController {
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         view.sendSubviewToBack(imageView)
     }
-    
-    func getAllTimeFromFirebase() {
-        let user = Auth.auth().currentUser
-        let uid = user?.uid ?? " " //get uid from firebase
-        self.db.collection("users").document(uid).collection("allTime").document("zero").getDocument { (document, error) in
-            if let document = document, document.exists {
-                let getOldPushups = (document["numberOfPushups"] as! NSString).doubleValue //get old pushups
-                let getOldTime = (document["pushupsTime"] as! NSString).doubleValue //get old total time
-                //                        print("GET OLD PUSHUPS^^^^", getOldTime)
-                
-                self.allPushups = Int((getOldPushups) + Double(self.newPushups)) //add old pushups to new pushups (pushups from latest session)
-                self.allPushupsTime = Int(getOldTime + Double(self.counter)) //rounds to int of combined, accurate down to nearest second
-                //
-                
-                // save all time pushups
-                let allRef = self.db.collection("users").document(uid).collection("allTime").document("zero")
-                allRef.updateData([
-                    "numberOfPushups": String(self.allPushups),
-                    "pushupsTime": String(self.allPushupsTime)
-                ]) { err in
-                    if let err = err {
-                        print("Error updating document: \(err)")
-                    } else {
-                        print("Updated all time pushups to " + String(self.allPushups) + " and all time pushup time to" + String(self.allPushupsTime))
-                    }
-                }
-            } else {
-                print("Document does not exist")
-                let allRef = self.db.collection("users").document(uid).collection("allTime").document("zero")
-                allRef.setData([
-                    "numberOfPushups": String(self.allPushups),
-                    "pushupsTime": String(self.allPushupsTime)
-                ]) { err in
-                    if let err = err {
-                        print("Error updating document: \(err)")
-                    } else {
-                        print("Updated all time pushups to " + String(self.allPushups) + " and all time pushup time to" + String(self.allPushupsTime))
-                    }
-                }
-            }
-        }
-    }
-    //Proximity Sensor Logic
-    @objc func proximityChanged(notification:NSNotification)
-    {
-        if UIDevice.current.proximityState {
-            let currentPushups = numberOfPushups.text ?? "0"
-            newPushups = (Int(currentPushups) ?? 0) + 1
-            numberOfPushups.text = String(newPushups)
-            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-            // String of proximity state status NSLog(String(UIDevice.current.proximityState))
-            // NSLog("Proximity true")
-            NSLog(String(newPushups))
-        } else {
-            // NSLog("Proximity false")
-        }
-    }
-    
-    //Timer
-    @objc func UpdateTimer() {
-        counter = counter + 0.1
-        timeLabel.text = String(format: "%.1f", counter)
-    }
-    
-    
     
 }
 

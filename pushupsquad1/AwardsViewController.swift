@@ -10,13 +10,14 @@ import UIKit
 
 class AwardsViewController: UIViewController {
     
+    @IBOutlet weak var browseDailyButton: UIButton!
     let backgroundImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Challenges"
                 
-        
+        browseDailyButton.isHidden = true
         
         
         // Do any additional setup after loading the view.
@@ -30,8 +31,8 @@ class AwardsViewController: UIViewController {
         }
     }
     @IBAction func tappedInviteFriend(_ sender: Any) {
-        let tryItURL = "https://bit.ly/2LTRD7t" //Update to appstore URL
-        let sms: String = "sms:&body=I found this new pushup app, i think you should try it too because its cool. " + tryItURL
+        let tryItURL = "https://bit.ly/pushuppartyapp" //Update to appstore URL
+        let sms: String = "sms:&body=I found this new pushup app, makes it easy to keep up with your pushups. " + tryItURL
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }

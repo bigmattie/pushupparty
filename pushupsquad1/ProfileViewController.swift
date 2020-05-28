@@ -22,22 +22,34 @@ class ProfileViewController: UIViewController {
             title = "Profile"
         let user = Auth.auth().currentUser
          let uid = user?.uid ?? " "
-        displayNameText.text = user?.displayName ?? "Unkown User"
+                displayNameText.text = user?.displayName ?? "Unkown User"
        let creationDate = user?.metadata.creationDate
                let dateFormatter = DateFormatter()
                dateFormatter.dateFormat = "MMMM YYYY" //Joined April 2020
-        creationDateText.text = dateFormatter.string(from: creationDate ?? Date()) // Set creation date text
-       guard let imageURL = user?.photoURL else { return }
+        creationDateText.text = "Joined: " +  dateFormatter.string(from: creationDate ?? Date()) // Set creation date text
+        
+        // checks if the user doesnt have a profile photo
+        if (user?.photoURL?.absoluteString == nil) {
+            //if the user doesnt have a PHOTO URL we set it to the default image
+            self.profieImage.image = UIImage(named: "1024.png")
+            
+        } else {
+            //if the user deos have a profile URL image we get it
+            guard let imageURL = user?.photoURL else { return }
 
-                // just not to cause a deadlock in UI!
-            DispatchQueue.global().async {
-                guard let imageData = try? Data(contentsOf: imageURL) else { return }
+                     // just not to cause a deadlock in UI!
+                 DispatchQueue.global().async {
+                     guard let imageData = try? Data(contentsOf: imageURL) else { return }
+                         
+                     let image = UIImage(data: imageData)
+                     DispatchQueue.main.async {
+                         self.profieImage.image = image
+                         
+                     }
+                 }
+            
+        }
 
-                let image = UIImage(data: imageData)
-                DispatchQueue.main.async {
-                    self.profieImage.image = image
-                }
-            }
         profieImage.layer.cornerRadius = profieImage.frame.height/2
         profieImage.clipsToBounds = true
 //        setImage (from: "https://image.blockbusterbd.net/00416_main_image_04072019225805.png" )

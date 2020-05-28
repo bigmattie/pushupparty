@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
             }
     }
     
-    func anonSignIn(_ action: UIAlertAction) {
+    func anonSignIn(_ sender: Any) {
        Auth.auth().signInAnonymously() { (authResult, error) in
          // ...
 //        guard let user = authResult?.user else { return }
@@ -50,13 +50,13 @@ class LoginViewController: UIViewController {
        }
     }
     func showGuestLoginActionSheet() {
-    let optionMenu = UIAlertController(title: nil, message: "Are you sure you want to continue as a Guest?", preferredStyle: .actionSheet)
-    let deleteAction = UIAlertAction(title: "Continue as Guest", style: .destructive, handler: anonSignIn)
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-    optionMenu.addAction(deleteAction)
-    optionMenu.addAction(cancelAction)
-    self.present(optionMenu, animated: true, completion: nil)
-    
+//    let optionMenu = UIAlertController(title: "Are you sure you want to Continue?", message: "If you continue as a guest your Stats may not be saved", preferredStyle: .alert)
+//    let deleteAction = UIAlertAction(title: "Continue as Guest", style: .destructive, handler: anonSignIn)
+//    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+//    optionMenu.addAction(deleteAction)
+//    optionMenu.addAction(cancelAction)
+//    self.present(optionMenu, animated: true, completion: nil)
+        self.anonSignIn(self)
     }
     
     func finishLogin() {
