@@ -70,7 +70,8 @@ class ProfileViewController: UIViewController {
     
     func signOut(_ action: UIAlertAction) {
         LoginManager().logOut()
-
+        KeychainItem.deleteUserIdentifierFromKeychain()
+        
         let firebaseAuth = Auth.auth()
             do {
               try firebaseAuth.signOut()

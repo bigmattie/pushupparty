@@ -12,9 +12,11 @@ import Firebase
 import AuthenticationServices //APPLE LOGIN
 import CryptoKit
 
+
 class LoginViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
+    
     // Unhashed nonce.
     fileprivate var currentNonce: String?
 
@@ -71,6 +73,36 @@ class LoginViewController: UIViewController {
         
         
     }
+
+    func showLoading(status: Bool) {
+        if (status == true) {
+            //if loading is true
+            let jeremyGif = UIImage.gifImageWithName("spinner")
+            let imageView = UIImageView(image: jeremyGif)
+            //        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
+            view.addSubview(imageView)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            view.bringSubviewToFront(imageView)
+        } else {
+            //if loading is not true
+            print("NOT DOING SHIT NOT LOADING")
+            let jeremyGif = UIImage.gifImageWithName("")
+            let imageView = UIImageView(image: jeremyGif)
+            //        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
+            view.addSubview(imageView)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            view.bringSubviewToFront(imageView)
+        }
+        
+    }
     //
     //AAPL Sign in
     //
@@ -101,7 +133,7 @@ class LoginViewController: UIViewController {
 //        let appleIDProvider = ASAuthorizationAppleIDProvider()
 //        let request = appleIDProvider.createRequest()
 //        request.requestedScopes = [.fullName, .email]
-        
+        showLoading(status: true)
         let nonce = randomNonceString()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -114,7 +146,8 @@ class LoginViewController: UIViewController {
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
         
-        //firebase sign in logic
+       let generator = UINotificationFeedbackGenerator()
+       generator.notificationOccurred(.success)
 
 
     }
@@ -144,6 +177,7 @@ class LoginViewController: UIViewController {
     
     func finishLogin() {
         performSegue(withIdentifier: "loginSegue", sender: self)
+        showLoading(status: false)
     }
     
     @IBAction func guestLogin(_ sender: Any) {
@@ -209,13 +243,16 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
   func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
     if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
       guard let nonce = currentNonce else {
+        showLoading(status: false)
         fatalError("Invalid state: A login callback was received, but no login request was sent.")
       }
       guard let appleIDToken = appleIDCredential.identityToken else {
+        showLoading(status: false)
         print("Unable to fetch identity token")
         return
       }
       guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+        showLoading(status: false)
         print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
         return
       }
@@ -229,6 +266,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
           // Error. If error.code == .MissingOrInvalidNonce, make sure
           // you're sending the SHA256-hashed nonce as a hex string with
           // your request to Apple.
+            self.showLoading(status: false)
           print(error?.localizedDescription)
           return
         }
@@ -241,6 +279,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
 
   func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
     // Handle error.
+    showLoading(status: false)
     print("Sign in with Apple errored: \(error)")
   }
 
@@ -378,3 +417,21 @@ private func randomNonceString(length: Int = 32) -> String {
 
 
 
+//            let generator = UINotificationFeedbackGenerator()
+//            generator.notificationOccurred(.success)
+//
+//        case 3:
+//            let generator = UINotificationFeedbackGenerator()
+//            generator.notificationOccurred(.warning)
+//
+//        case 4:
+//            let generator = UIImpactFeedbackGenerator(style: .light)
+//            generator.impactOccurred()
+//
+//        case 5:
+//            let generator = UIImpactFeedbackGenerator(style: .medium)
+//            generator.impactOccurred()
+//
+//        case 6:
+//            let generator = UIImpactFeedbackGenerator(style: .heavy)
+//            generator.impactOccurred()
