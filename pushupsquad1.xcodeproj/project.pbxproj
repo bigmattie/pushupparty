@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1908B7F7247F0C8E00E37069 /* StatsView.storyboard */; };
 		1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7F9247F329600E37069 /* TimeExtensions.swift */; };
+		1908B7FE248078A000E37069 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7FD2480789F00E37069 /* KeychainItem.swift */; };
 		190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41EE245E1206009A9C79 /* AppDelegate.swift */; };
 		190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F0245E1206009A9C79 /* SceneDelegate.swift */; };
 		190A41F3245E1206009A9C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F2245E1206009A9C79 /* ViewController.swift */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		1908B7F7247F0C8E00E37069 /* StatsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatsView.storyboard; sourceTree = "<group>"; };
 		1908B7F9247F329600E37069 /* TimeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeExtensions.swift; sourceTree = "<group>"; };
+		1908B7FD2480789F00E37069 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		1908B7FF24808C0900E37069 /* Pushup Party.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pushup Party.entitlements"; sourceTree = "<group>"; };
 		190A41EB245E1206009A9C79 /* Pushup Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pushup Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		190A41EE245E1206009A9C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		190A41F0245E1206009A9C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		190A41ED245E1206009A9C79 /* pushupsquad1 */ = {
 			isa = PBXGroup;
 			children = (
+				1908B7FF24808C0900E37069 /* Pushup Party.entitlements */,
 				196C5BAE247C3A180031A182 /* Custom Classes */,
 				190A42242464F865009A9C79 /* ProfileViewController.swift */,
 				191939B1246F4A0B008FE2AE /* Storyboards */,
@@ -150,6 +154,7 @@
 		191939B0246F49DE008FE2AE /* Custom Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1908B7FD2480789F00E37069 /* KeychainItem.swift */,
 				191939AC246F46A9008FE2AE /* UIImageExtension.swift */,
 				19193996246B3FFE008FE2AE /* DateExtensions.swift */,
 				1908B7F9247F329600E37069 /* TimeExtensions.swift */,
@@ -334,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1908B7FE248078A000E37069 /* KeychainItem.swift in Sources */,
 				191399DB246643FD0081F99F /* TabViewController.swift in Sources */,
 				19D20C79246624D4004D9E92 /* LoginViewController.swift in Sources */,
 				190A41F3245E1206009A9C79 /* ViewController.swift in Sources */,
@@ -499,6 +505,7 @@
 			baseConfigurationReference = DA2F69B79F2003D5593E36A7 /* Pods-pushupsquad1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "pushupsquad1/Pushup Party.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
@@ -521,6 +528,7 @@
 			baseConfigurationReference = 84F202D01D8A4961C28A0F7D /* Pods-pushupsquad1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "pushupsquad1/Pushup Party.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;

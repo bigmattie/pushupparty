@@ -51,7 +51,6 @@
         <!--Profile View Controller-->
         <scene sceneID="Q9f-Gp-u7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IlU-uY-Kle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3uH-bp-mwm" customClass="ProfileViewController" customModule="Pushup_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0b-kp-c9V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -98,7 +97,7 @@
                         <viewLayoutGuide key="safeArea" id="rAc-vP-YGg"/>
                     </view>
                     <navigationItem key="navigationItem" id="kfX-QI-9WK">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" image="barButtonItem:apg-84-7cV:image" catalog="system" id="apg-84-7cV">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" image="barButtonItem:apg-84-7cV:image" id="apg-84-7cV">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="userSignOutTapped:" destination="3uH-bp-mwm" id="0eg-fH-ehe"/>
@@ -112,6 +111,7 @@
                         <segue destination="Qpb-NB-1Ey" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="K57-PX-57S"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IlU-uY-Kle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="930.80357142857133"/>
         </scene>
@@ -282,7 +282,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="barButtonItem:apg-84-7cV:image" catalog="system" width="128" height="124">
+        <image name="barButtonItem:apg-84-7cV:image" width="128" height="124">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKisyNThCSktPUlUkbnVsbNcNDg8QERITFBUW
