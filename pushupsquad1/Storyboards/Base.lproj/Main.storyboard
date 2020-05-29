@@ -29,6 +29,23 @@
             </objects>
             <point key="canvasLocation" x="-943" y="-579"/>
         </scene>
+        <!--Record-->
+        <scene sceneID="BDh-am-B4H">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCK-cI-zTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController title="Record" id="ogT-MK-6L0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record" image="smallcircle.circle.fill" catalog="system" id="Ufe-eB-EMB">
+                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="d7L-7P-pVQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0z-ag-FOo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1886" y="194"/>
+        </scene>
         <!--Stats-->
         <scene sceneID="tei-8r-9L2">
             <objects>
@@ -257,10 +274,12 @@
         <!--PushupCounter-->
         <scene sceneID="HcM-IT-fdq">
             <objects>
-                <viewControllerPlaceholder storyboardName="PushupCounter" id="4dM-6Q-5kz" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PushupCounter" id="4dM-6Q-5kz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="o6L-cR-ZNY"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfL-Xi-zWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1800.0000000000002" y="1345.9821428571429"/>
+            <point key="canvasLocation" x="-1928" y="901"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="alT-CC-v35">
@@ -17370,5 +17389,6 @@ AAAAAAAAAAAAAAAAAA+hRA
         <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rosette" catalog="system" width="100" height="128"/>
+        <image name="smallcircle.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

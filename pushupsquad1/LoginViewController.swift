@@ -63,21 +63,31 @@ class LoginViewController: UIViewController {
         facebookLoginButton.isHidden = false
         appleLoginButton.isHidden = false
         #endif
-//        appleLoginButton.setImage(UIImage(named: "apple"), for: UIControl.State.normal)
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+//       appleLoginButton.setImage(UIImage(named: "apple.png"), for: .normal)
+//       appleLoginButton.imageView?.contentMode = .scaleAspectFit
+//       appleLoginButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+
+
+
+        
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in //listen for state chang on auth
                   if user == nil {
-                    
+                    //if no user object do nothing which means we dont have an active session
                  } else {
-                    self.performSegue(withIdentifier: "loginSegue", sender: self)
-//
-//                    self.finishLogin() removed because it was forcing reload
+                    self.performSegue(withIdentifier: "loginSegue", sender: self) //transitions user to new page
+///                    self.finishLogin() removed because it was forcing reload
                  }
             }
         performExistingAccountSetupFlows()
         
         
     }
-
+    
+    func finishLogin() {
+        performSegue(withIdentifier: "loginSegue", sender: self)
+        showLoading(status: false) //stops loading animation
+    }
+    
     func showLoading(status: Bool) {
         view = UIView()
         let generator = UINotificationFeedbackGenerator()
@@ -87,24 +97,11 @@ class LoginViewController: UIViewController {
             //if loading is true
                
                 view.backgroundColor = UIColor(white: 0, alpha: 0.65)
-
                 spinner.translatesAutoresizingMaskIntoConstraints = false
                 spinner.startAnimating()
                 view.addSubview(spinner)
-
                 spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
                 spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-            
-//            let jeremyGif = UIImage.gifImageWithName("spinner")
-//            let imageView = UIImageView(image: jeremyGif)
-//
-//           view.addSubview(imageView)
-//            imageView.translatesAutoresizingMaskIntoConstraints = false
-//            imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//            view.bringSubviewToFront(imageView)
         } else {
             //if loading is not true
             print("NOT DOING SHIT NOT LOADING")
@@ -118,7 +115,8 @@ class LoginViewController: UIViewController {
     //
     /// - Tag: add_appleid_button
     func setupProviderLoginView() {
-//        let authorizationButton = ASAuthorizationAppleIDButton()
+        let authorizationButton = ASAuthorizationAppleIDButton()
+        view.addSubview(authorizationButton)
         appleLoginButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
 //        self.loginProviderStackView.addArrangedSubview(authorizationButton)
     }
@@ -155,44 +153,33 @@ class LoginViewController: UIViewController {
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
-        
-       
-
-
     }
     
     //
-    //ANON SIGN IN
+    //GUEST LOGIN - ANON SIGN IN
     //
     func anonSignIn(_ sender: Any) {
        Auth.auth().signInAnonymously() { (authResult, error) in
-         // ...
-//        guard let user = authResult?.user else { return }
-//        let isAnonymous = user.isAnonymous  // true
-//        let uid = user.uid
-//        print("UID UID UID", uid, "   ANONON", isAnonymous)
-        self.finishLogin()
+        self.finishLogin() //transitions user to app and kills animation
        }
       
     }
     func showGuestLoginActionSheet() {
-//    let optionMenu = UIAlertController(title: "Are you sure you want to Continue?", message: "If you continue as a guest your Stats may not be saved", preferredStyle: .alert)
-//    let deleteAction = UIAlertAction(title: "Continue as Guest", style: .destructive, handler: anonSignIn)
-//    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-//    optionMenu.addAction(deleteAction)
-//    optionMenu.addAction(cancelAction)
-//    self.present(optionMenu, animated: true, completion: nil)
-        self.anonSignIn(self)
+    let optionMenu = UIAlertController(title: "Continue as a Guest", message: "If you continue your Stats may not be saved but, you can test the app", preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Continue", style: .default, handler: anonSignIn)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: refreshView(_:)) //refresh view to stop the loading
+    optionMenu.addAction(deleteAction)
+    optionMenu.addAction(cancelAction)
+    self.present(optionMenu, animated: true, completion: nil)
+        
     }
-    
-    func finishLogin() {
-        performSegue(withIdentifier: "loginSegue", sender: self)
-        showLoading(status: false)
+    func refreshView(_ sender: Any) {
+        self.loadView() //refreshs view
     }
-    
     @IBAction func guestLogin(_ sender: Any) {
         showLoading(status: true)
         showGuestLoginActionSheet()
+        
     }
     
 

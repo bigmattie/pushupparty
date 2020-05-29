@@ -26,8 +26,9 @@ class CustomUIButton: UIButton {
 //        backgroundColor = UIColor.systemGreen
         layer.cornerRadius = 10
         layer.opacity = 0.95
-        titleLabel?.font =  UIFont(name: "System Semibold", size: 17)
         
+        titleLabel?.font =  UIFont(name: "System Semibold", size: 20)
+
         
                 
         

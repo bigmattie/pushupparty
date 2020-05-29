@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="elq-Jr-S4q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iza-bd-pFQ">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -402,5 +402,310 @@
             </objects>
             <point key="canvasLocation" x="-181.15942028985509" y="929.46428571428567"/>
         </scene>
+        <!--Stats-->
+        <scene sceneID="aMe-wL-ycx">
+            <objects>
+                <viewController title="Stats" id="Iza-bd-pFQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ohi-gR-1ET">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeN-f9-IE9" userLabel="Screen View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="726"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mex-dR-DoL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuZ-eQ-2yy" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Record Pushups">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="4dM-6Q-5kz" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="hWJ-oI-5GK"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count pushups with the automated counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z24-hP-YXe">
+                                                <rect key="frame" x="60.333333333333343" y="72" width="293.66666666666663" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-bt-Ny7">
+                                                <rect key="frame" x="155" y="133.66666666666666" width="104" height="26.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-Jt-Xx2" userLabel="Sunday Progress bar">
+                                                <rect key="frame" x="20" y="204" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-gP-v3M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hPm-KV-EgL" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="24.333333333333343" y="8" width="296.33333333333326" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-fK-GGY">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="yQQ-fK-GGY" firstAttribute="leading" secondItem="hPm-KV-EgL" secondAttribute="trailing" constant="15" id="X39-Ze-lJn"/>
+                                                    <constraint firstItem="hPm-KV-EgL" firstAttribute="leading" secondItem="ybT-gP-v3M" secondAttribute="trailing" constant="15" id="bK1-ag-ibe"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-Dw-BNL" userLabel="Monday Progress bar">
+                                                <rect key="frame" x="20" y="270" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-0u-n90">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eJR-Cg-22l" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="27.666666666666657" y="8" width="293" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="39A-PW-VKI">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="eJR-Cg-22l" firstAttribute="leading" secondItem="2Vz-0u-n90" secondAttribute="trailing" constant="15" id="EaM-9U-jcM"/>
+                                                    <constraint firstItem="39A-PW-VKI" firstAttribute="leading" secondItem="eJR-Cg-22l" secondAttribute="trailing" constant="15" id="jCC-0W-jl5"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-Xp-elP" userLabel="Tuesday Progress bar">
+                                                <rect key="frame" x="20" y="336" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0rw-FB-mXs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I0x-5y-L9D" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="24.333333333333343" y="8" width="296.33333333333326" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="S0p-3o-WWO">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="S0p-3o-WWO" firstAttribute="leading" secondItem="I0x-5y-L9D" secondAttribute="trailing" constant="15" id="OrV-Zo-a8z"/>
+                                                    <constraint firstItem="I0x-5y-L9D" firstAttribute="leading" secondItem="0rw-FB-mXs" secondAttribute="trailing" constant="15" id="hsa-bd-oKn"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-EY-FIw" userLabel="Wednesday Progress bar">
+                                                <rect key="frame" x="20" y="402" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="UNg-3C-fYD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="14.333333333333334" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DHz-0i-cHg" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="29.333333333333343" y="8" width="291.33333333333326" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="OCV-sS-jD1">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="DHz-0i-cHg" firstAttribute="leading" secondItem="UNg-3C-fYD" secondAttribute="trailing" constant="15" id="cjc-di-9bP"/>
+                                                    <constraint firstItem="OCV-sS-jD1" firstAttribute="leading" secondItem="DHz-0i-cHg" secondAttribute="trailing" constant="15" id="wbq-tl-roL"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HtJ-qS-8rt" userLabel="Thursday Progress bar">
+                                                <rect key="frame" x="20" y="468" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1RH-HP-zrS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="euY-F1-slz" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="24.333333333333343" y="8" width="296.33333333333326" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="nqi-Rj-v2w">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="euY-F1-slz" firstAttribute="leading" secondItem="1RH-HP-zrS" secondAttribute="trailing" constant="15" id="Bbm-Vb-Be8"/>
+                                                    <constraint firstItem="nqi-Rj-v2w" firstAttribute="leading" secondItem="euY-F1-slz" secondAttribute="trailing" constant="15" id="Yhg-V1-Lew"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-ZR-Qex" userLabel="Friday Progress bar">
+                                                <rect key="frame" x="20" y="534" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-bv-BhR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="8.3333333333333339" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fIU-gS-SDT" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="23.333333333333343" y="8" width="297.33333333333326" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tTZ-jn-SPa">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="fIU-gS-SDT" firstAttribute="leading" secondItem="mXF-bv-BhR" secondAttribute="trailing" constant="15" id="KkL-HR-DzV"/>
+                                                    <constraint firstItem="tTZ-jn-SPa" firstAttribute="leading" secondItem="fIU-gS-SDT" secondAttribute="trailing" constant="15" id="haY-5V-xb1"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zn-TD-D5A" userLabel="Saturday Progress bar">
+                                                <rect key="frame" x="20" y="600" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pX3-MD-Jse">
+                                                        <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-JV-iQu" customClass="CustomProgessBar" customModule="Pushup_Party" customModuleProvider="target">
+                                                        <rect key="frame" x="24.333333333333343" y="8" width="296.33333333333326" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Z-5y-1AO">
+                                                        <rect key="frame" x="335.66666666666669" y="0.0" width="38.333333333333314" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="h8k-JV-iQu" firstAttribute="leading" secondItem="pX3-MD-Jse" secondAttribute="trailing" constant="15" id="AV1-hS-ZTj"/>
+                                                    <constraint firstItem="Y7Z-5y-1AO" firstAttribute="leading" secondItem="h8k-JV-iQu" secondAttribute="trailing" constant="15" id="LQb-Yz-56n"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="LaL-Da-Clw" userLabel="Overall Bottom Stack View">
+                                                <rect key="frame" x="20" y="661.66666666666663" width="374" height="26.333333333333371"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tFl-bb-Tsr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="26.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All-Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="TZ1-97-UJd">
+                                                        <rect key="frame" x="289.66666666666669" y="0.0" width="84.333333333333314" height="26.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ZNb-hC-Gym" userLabel="Overall Description Stack (Bottom)">
+                                                <rect key="frame" x="20" y="698" width="374" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... Pushups ...min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dnr-Lr-eLx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... Pushups ...min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-ae-ch3">
+                                                        <rect key="frame" x="259" y="0.0" width="115" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZNb-hC-Gym" firstAttribute="top" secondItem="LaL-Da-Clw" secondAttribute="bottom" constant="10" id="07v-Tg-ZVb"/>
+                                            <constraint firstAttribute="trailing" secondItem="e8k-Jt-Xx2" secondAttribute="trailing" constant="20" id="0U1-vQ-nRG"/>
+                                            <constraint firstAttribute="trailing" secondItem="SdF-ZR-Qex" secondAttribute="trailing" constant="20" id="0XY-1r-ZNe"/>
+                                            <constraint firstAttribute="trailing" secondItem="GuZ-eQ-2yy" secondAttribute="trailing" constant="20" id="2uM-kj-uMr"/>
+                                            <constraint firstItem="lgw-EY-FIw" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="4Mi-eW-DdR"/>
+                                            <constraint firstItem="2zn-TD-D5A" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="AV5-YU-FPd"/>
+                                            <constraint firstItem="LaL-Da-Clw" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="BPg-UG-k7a"/>
+                                            <constraint firstItem="SdF-ZR-Qex" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="EIL-63-pBk"/>
+                                            <constraint firstItem="HtJ-qS-8rt" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="Fo2-sy-0EV"/>
+                                            <constraint firstAttribute="trailing" secondItem="vK4-Xp-elP" secondAttribute="trailing" constant="20" id="FpO-ue-tbL"/>
+                                            <constraint firstItem="xqg-Dw-BNL" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="HcM-ve-Oyj"/>
+                                            <constraint firstAttribute="trailing" secondItem="HtJ-qS-8rt" secondAttribute="trailing" constant="20" id="Oyr-l0-Ft5"/>
+                                            <constraint firstAttribute="trailing" secondItem="xqg-Dw-BNL" secondAttribute="trailing" constant="20" id="ajp-Rs-kEn"/>
+                                            <constraint firstItem="vK4-Xp-elP" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="cY0-65-ItV"/>
+                                            <constraint firstItem="ZNb-hC-Gym" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="dWh-gG-Jo5"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZNb-hC-Gym" secondAttribute="trailing" constant="20" id="fm3-nT-za4"/>
+                                            <constraint firstItem="e8k-Jt-Xx2" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="kBI-Gd-aUN"/>
+                                            <constraint firstAttribute="trailing" secondItem="2zn-TD-D5A" secondAttribute="trailing" constant="20" id="pYe-8Z-9OT"/>
+                                            <constraint firstAttribute="trailing" secondItem="LaL-Da-Clw" secondAttribute="trailing" constant="20" id="rki-E0-5tB"/>
+                                            <constraint firstAttribute="trailing" secondItem="lgw-EY-FIw" secondAttribute="trailing" constant="20" id="vgE-MP-VNi"/>
+                                            <constraint firstItem="GuZ-eQ-2yy" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="wOx-Jp-cXa"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mex-dR-DoL" firstAttribute="leading" secondItem="SeN-f9-IE9" secondAttribute="leading" id="DmW-t8-NhH"/>
+                                    <constraint firstItem="mex-dR-DoL" firstAttribute="top" secondItem="SeN-f9-IE9" secondAttribute="top" id="GSl-2R-iMc"/>
+                                    <constraint firstAttribute="bottom" secondItem="mex-dR-DoL" secondAttribute="bottom" constant="10" id="bUA-0J-28J"/>
+                                    <constraint firstAttribute="trailing" secondItem="mex-dR-DoL" secondAttribute="trailing" id="v0R-6I-P8i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SeN-f9-IE9" firstAttribute="leading" secondItem="YnR-NA-sVl" secondAttribute="leading" id="CGD-Vw-wXl"/>
+                            <constraint firstItem="SeN-f9-IE9" firstAttribute="top" secondItem="YnR-NA-sVl" secondAttribute="top" id="TtQ-7t-nHs"/>
+                            <constraint firstItem="YnR-NA-sVl" firstAttribute="bottom" secondItem="SeN-f9-IE9" secondAttribute="bottom" constant="10" id="ayA-1a-aBZ"/>
+                            <constraint firstItem="YnR-NA-sVl" firstAttribute="trailing" secondItem="SeN-f9-IE9" secondAttribute="trailing" id="hYw-TD-rUp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YnR-NA-sVl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kla-jM-icQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cv9-v7-laE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1983" y="929"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hWJ-oI-5GK"/>
+    </inferredMetricsTieBreakers>
 </document>
