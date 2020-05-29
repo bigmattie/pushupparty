@@ -10,6 +10,7 @@
 		1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1908B7F7247F0C8E00E37069 /* StatsView.storyboard */; };
 		1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7F9247F329600E37069 /* TimeExtensions.swift */; };
 		1908B7FE248078A000E37069 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7FD2480789F00E37069 /* KeychainItem.swift */; };
+		1908B80B2480ECC500E37069 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 1908B80A2480ECC500E37069 /* apple.png */; };
 		190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41EE245E1206009A9C79 /* AppDelegate.swift */; };
 		190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F0245E1206009A9C79 /* SceneDelegate.swift */; };
 		190A41F3245E1206009A9C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F2245E1206009A9C79 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		1908B7F9247F329600E37069 /* TimeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeExtensions.swift; sourceTree = "<group>"; };
 		1908B7FD2480789F00E37069 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		1908B7FF24808C0900E37069 /* Pushup Party.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pushup Party.entitlements"; sourceTree = "<group>"; };
+		1908B80A2480ECC500E37069 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = ../../apple.png; sourceTree = "<group>"; };
 		190A41EB245E1206009A9C79 /* Pushup Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pushup Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		190A41EE245E1206009A9C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		190A41F0245E1206009A9C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				191939B0246F49DE008FE2AE /* Custom Extensions */,
 				191939A8246F07D9008FE2AE /* 338F904C-67B0-4C56-B501-2929B97B2FA5.PNG */,
 				191939A9246F07DA008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG */,
+				1908B80A2480ECC500E37069 /* apple.png */,
 				190A42282464FCF5009A9C79 /* StatsViewController.swift */,
 				190A42262464FBBD009A9C79 /* AwardsViewController.swift */,
 				190A41EE245E1206009A9C79 /* AppDelegate.swift */,
@@ -257,6 +260,7 @@
 				190A41FB245E121B009A9C79 /* LaunchScreen.storyboard in Resources */,
 				191939A7246E21E9008FE2AE /* Stats.storyboard in Resources */,
 				191939A3246E1B91008FE2AE /* Challenges.storyboard in Resources */,
+				1908B80B2480ECC500E37069 /* apple.png in Resources */,
 				1919399C246C7992008FE2AE /* PushupCounter.storyboard in Resources */,
 				190A41F8245E121B009A9C79 /* Assets.xcassets in Resources */,
 				196C5BB8247DD4620031A182 /* pushupDemo.gif in Resources */,
@@ -507,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "pushupsquad1/Pushup Party.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
 				INFOPLIST_FILE = pushupsquad1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -515,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.12;
+				MARKETING_VERSION = 1.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushup.party;
 				PRODUCT_NAME = "Pushup Party";
 				SWIFT_VERSION = 5.0;
@@ -530,7 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "pushupsquad1/Pushup Party.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
 				INFOPLIST_FILE = pushupsquad1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -538,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.12;
+				MARKETING_VERSION = 1.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushup.party;
 				PRODUCT_NAME = "Pushup Party";
 				SWIFT_VERSION = 5.0;

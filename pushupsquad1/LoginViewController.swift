@@ -60,15 +60,17 @@ class LoginViewController: UIViewController {
         facebookLoginButton.isHidden = false
         appleLoginButton.isHidden = false
         #else
-        facebookLoginButton.isHidden = true
-        appleLoginButton.isHidden = true
+        facebookLoginButton.isHidden = false
+        appleLoginButton.isHidden = false
         #endif
+//        appleLoginButton.setImage(UIImage(named: "apple"), for: UIControl.State.normal)
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
                   if user == nil {
                     
                  } else {
-                    
-                    self.finishLogin()
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+//
+//                    self.finishLogin() removed because it was forcing reload
                  }
             }
         performExistingAccountSetupFlows()
@@ -78,6 +80,8 @@ class LoginViewController: UIViewController {
 
     func showLoading(status: Bool) {
         view = UIView()
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         
         if (status == true) {
             //if loading is true
@@ -152,8 +156,7 @@ class LoginViewController: UIViewController {
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
         
-       let generator = UINotificationFeedbackGenerator()
-       generator.notificationOccurred(.success)
+       
 
 
     }
@@ -170,7 +173,7 @@ class LoginViewController: UIViewController {
 //        print("UID UID UID", uid, "   ANONON", isAnonymous)
         self.finishLogin()
        }
-        showLoading(status: false)
+      
     }
     func showGuestLoginActionSheet() {
 //    let optionMenu = UIAlertController(title: "Are you sure you want to Continue?", message: "If you continue as a guest your Stats may not be saved", preferredStyle: .alert)
@@ -224,7 +227,7 @@ class LoginViewController: UIViewController {
             self.finishLogin()
             NSLog("completed")
           }
-            self.showLoading(status: false)
+            
             NSLog("finished login")
         }
 
@@ -283,7 +286,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
           print(error?.localizedDescription)
           return
         }
-        self.finishLogin()
+        
         // User is signed in to Firebase with Apple.
         // ...
       }

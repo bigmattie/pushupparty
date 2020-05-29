@@ -21,13 +21,13 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
             title = "Profile"
         let user = Auth.auth().currentUser
-         let uid = user?.uid ?? " "
-                displayNameText.text = user?.displayName ?? "Unkown User"
+        let uid = user?.uid ?? " "
+        displayNameText.text = user?.displayName ?? "Unkown User"
        let creationDate = user?.metadata.creationDate
                let dateFormatter = DateFormatter()
                dateFormatter.dateFormat = "MMMM YYYY" //Joined April 2020
         creationDateText.text = "Joined: " +  dateFormatter.string(from: creationDate ?? Date()) // Set creation date text
-        
+    
         // checks if the user doesnt have a profile photo
         if (user?.photoURL?.absoluteString == nil) {
             //if the user doesnt have a PHOTO URL we set it to the default image
