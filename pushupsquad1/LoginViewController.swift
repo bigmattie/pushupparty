@@ -77,10 +77,12 @@ class LoginViewController: UIViewController {
     }
 
     func showLoading(status: Bool) {
+        view = UIView()
+        
         if (status == true) {
             //if loading is true
-               view = UIView()
-                view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+               
+                view.backgroundColor = UIColor(white: 0, alpha: 0.65)
 
                 spinner.translatesAutoresizingMaskIntoConstraints = false
                 spinner.startAnimating()
@@ -103,7 +105,7 @@ class LoginViewController: UIViewController {
             //if loading is not true
             print("NOT DOING SHIT NOT LOADING")
             spinner.removeFromSuperview()
-            view.backgroundColor = nil
+            self.loadView() //refreshview
         }
         
     }
