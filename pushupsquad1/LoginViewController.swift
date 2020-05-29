@@ -16,7 +16,7 @@ import CryptoKit
 class LoginViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
-    
+    var spinner = UIActivityIndicatorView(style: .whiteLarge)
     // Unhashed nonce.
     fileprivate var currentNonce: String?
 
@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var facebookLoginButton: UIButton!
     @IBOutlet weak var appleLoginButton: UIButton!
+    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var subtitleLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,29 +79,31 @@ class LoginViewController: UIViewController {
     func showLoading(status: Bool) {
         if (status == true) {
             //if loading is true
-            let jeremyGif = UIImage.gifImageWithName("spinner")
-            let imageView = UIImageView(image: jeremyGif)
-            //        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
-            view.addSubview(imageView)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            view.bringSubviewToFront(imageView)
+               view = UIView()
+                view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+
+                spinner.translatesAutoresizingMaskIntoConstraints = false
+                spinner.startAnimating()
+                view.addSubview(spinner)
+
+                spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+                spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            
+//            let jeremyGif = UIImage.gifImageWithName("spinner")
+//            let imageView = UIImageView(image: jeremyGif)
+//
+//           view.addSubview(imageView)
+//            imageView.translatesAutoresizingMaskIntoConstraints = false
+//            imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//            view.bringSubviewToFront(imageView)
         } else {
             //if loading is not true
             print("NOT DOING SHIT NOT LOADING")
-            let jeremyGif = UIImage.gifImageWithName("")
-            let imageView = UIImageView(image: jeremyGif)
-            //        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
-            view.addSubview(imageView)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            view.bringSubviewToFront(imageView)
+            spinner.removeFromSuperview()
+            view.backgroundColor = nil
         }
         
     }
@@ -164,6 +168,7 @@ class LoginViewController: UIViewController {
 //        print("UID UID UID", uid, "   ANONON", isAnonymous)
         self.finishLogin()
        }
+        showLoading(status: false)
     }
     func showGuestLoginActionSheet() {
 //    let optionMenu = UIAlertController(title: "Are you sure you want to Continue?", message: "If you continue as a guest your Stats may not be saved", preferredStyle: .alert)
@@ -181,17 +186,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func guestLogin(_ sender: Any) {
+        showLoading(status: true)
         showGuestLoginActionSheet()
     }
     
 
     @IBAction func facebookLogin(_ sender: Any) {
+        showLoading(status: true)
         LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
           if let error = error {
+            self.showLoading(status: false)
             print("Failed to login: \(error.localizedDescription)")
             return
           }
             guard let accessToken = AccessToken.current else {
+                self.showLoading(status: false)
             print("Failed to get access token")
             return
           }
@@ -200,6 +209,7 @@ class LoginViewController: UIViewController {
         // Perform login by calling Firebase APIs
           Auth.auth().signIn(with: credential) { (user, error) in
             if let error = error {
+                self.showLoading(status: false)
               print("Login error: \(error.localizedDescription)")
               let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
               let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -212,7 +222,7 @@ class LoginViewController: UIViewController {
             self.finishLogin()
             NSLog("completed")
           }
-            
+            self.showLoading(status: false)
             NSLog("finished login")
         }
 
@@ -220,6 +230,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func appleLogin(_ sender: Any) {
+        showLoading(status: true)
         print("Apple Login")
         handleAuthorizationAppleIDButtonPress()
     }

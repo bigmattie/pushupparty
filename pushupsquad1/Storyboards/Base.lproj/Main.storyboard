@@ -211,6 +211,8 @@
                     <connections>
                         <outlet property="appleLoginButton" destination="zRZ-B8-byc" id="3nG-LV-OCW"/>
                         <outlet property="facebookLoginButton" destination="NEf-Pq-1Fn" id="Fnm-Nu-GEI"/>
+                        <outlet property="headlineLabel" destination="spK-vP-QHA" id="JXI-fA-w1l"/>
+                        <outlet property="subtitleLable" destination="aAp-4M-Llp" id="OrB-Ki-Yth"/>
                         <segue destination="ihj-av-5L9" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="RVY-dc-dSQ"/>
                     </connections>
                 </viewController>

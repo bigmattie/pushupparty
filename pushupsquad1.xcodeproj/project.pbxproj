@@ -10,11 +10,6 @@
 		1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1908B7F7247F0C8E00E37069 /* StatsView.storyboard */; };
 		1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7F9247F329600E37069 /* TimeExtensions.swift */; };
 		1908B7FE248078A000E37069 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7FD2480789F00E37069 /* KeychainItem.swift */; };
-		1908B8012480CA8600E37069 /* loading2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1908B8002480CA8500E37069 /* loading2.gif */; };
-		1908B8032480CBE700E37069 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1908B8022480CBE600E37069 /* loading.gif */; };
-		1908B8052480CEBD00E37069 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1908B8042480CEBD00E37069 /* loading.gif */; };
-		1908B8072480D42600E37069 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1908B8062480D42600E37069 /* loading.gif */; };
-		1908B8092480D4DA00E37069 /* spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1908B8082480D4DA00E37069 /* spinner.gif */; };
 		190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41EE245E1206009A9C79 /* AppDelegate.swift */; };
 		190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F0245E1206009A9C79 /* SceneDelegate.swift */; };
 		190A41F3245E1206009A9C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F2245E1206009A9C79 /* ViewController.swift */; };
@@ -51,11 +46,6 @@
 		1908B7F9247F329600E37069 /* TimeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeExtensions.swift; sourceTree = "<group>"; };
 		1908B7FD2480789F00E37069 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		1908B7FF24808C0900E37069 /* Pushup Party.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pushup Party.entitlements"; sourceTree = "<group>"; };
-		1908B8002480CA8500E37069 /* loading2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading2.gif; path = ../../loading2.gif; sourceTree = "<group>"; };
-		1908B8022480CBE600E37069 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../loading.gif; sourceTree = "<group>"; };
-		1908B8042480CEBD00E37069 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../loading.gif; sourceTree = "<group>"; };
-		1908B8062480D42600E37069 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../loading.gif; sourceTree = "<group>"; };
-		1908B8082480D4DA00E37069 /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = spinner.gif; path = ../../spinner.gif; sourceTree = "<group>"; };
 		190A41EB245E1206009A9C79 /* Pushup Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pushup Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		190A41EE245E1206009A9C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		190A41F0245E1206009A9C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,11 +136,6 @@
 				190A41F0245E1206009A9C79 /* SceneDelegate.swift */,
 				190A41F2245E1206009A9C79 /* ViewController.swift */,
 				191399DA246643FD0081F99F /* TabViewController.swift */,
-				1908B8002480CA8500E37069 /* loading2.gif */,
-				1908B8082480D4DA00E37069 /* spinner.gif */,
-				1908B8022480CBE600E37069 /* loading.gif */,
-				1908B8042480CEBD00E37069 /* loading.gif */,
-				1908B8062480D42600E37069 /* loading.gif */,
 				19167AB8247A23A7002F33EE /* 1024.png */,
 				19D20C78246624D3004D9E92 /* LoginViewController.swift */,
 				196C5BB9247DD8290031A182 /* swirl.gif */,
@@ -268,7 +253,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1908B8092480D4DA00E37069 /* spinner.gif in Resources */,
 				191939AA246F07DB008FE2AE /* 338F904C-67B0-4C56-B501-2929B97B2FA5.PNG in Resources */,
 				190A41FB245E121B009A9C79 /* LaunchScreen.storyboard in Resources */,
 				191939A7246E21E9008FE2AE /* Stats.storyboard in Resources */,
@@ -279,15 +263,11 @@
 				191939A0246CDAFF008FE2AE /* 149-1491934_fitness-test-women-working-out-black-and-white.png in Resources */,
 				1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */,
 				19193995246A3478008FE2AE /* confetti.png in Resources */,
-				1908B8012480CA8600E37069 /* loading2.gif in Resources */,
 				191939B8246F54D4008FE2AE /* magenta.gif in Resources */,
 				191939A5246E1EE7008FE2AE /* 88-886971_clip-art-push-up-silhouette-black-women-working.png in Resources */,
 				19167AB9247A23A7002F33EE /* 1024.png in Resources */,
-				1908B8032480CBE700E37069 /* loading.gif in Resources */,
 				190A41F6245E1206009A9C79 /* Main.storyboard in Resources */,
 				191939AB246F07DB008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG in Resources */,
-				1908B8052480CEBD00E37069 /* loading.gif in Resources */,
-				1908B8072480D42600E37069 /* loading.gif in Resources */,
 				196C5BBA247DD8290031A182 /* swirl.gif in Resources */,
 				197043662478868500305AAE /* GoogleService-Info.plist in Resources */,
 			);
