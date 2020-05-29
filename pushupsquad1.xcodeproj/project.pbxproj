@@ -12,6 +12,7 @@
 		1908B7FE248078A000E37069 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B7FD2480789F00E37069 /* KeychainItem.swift */; };
 		1908B80B2480ECC500E37069 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 1908B80A2480ECC500E37069 /* apple.png */; };
 		1908B80D2481502900E37069 /* blacksquareapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 1908B80C2481502900E37069 /* blacksquareapple.png */; };
+		1908B81124819E9C00E37069 /* StatsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908B81024819E9C00E37069 /* StatsUIViewController.swift */; };
 		190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41EE245E1206009A9C79 /* AppDelegate.swift */; };
 		190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F0245E1206009A9C79 /* SceneDelegate.swift */; };
 		190A41F3245E1206009A9C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190A41F2245E1206009A9C79 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		1908B7FF24808C0900E37069 /* Pushup Party.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pushup Party.entitlements"; sourceTree = "<group>"; };
 		1908B80A2480ECC500E37069 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = ../../apple.png; sourceTree = "<group>"; };
 		1908B80C2481502900E37069 /* blacksquareapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blacksquareapple.png; path = "../../../xcodeProjects/Sign in with Apple - Logo Only/PNG/1x/blacksquareapple.png"; sourceTree = "<group>"; };
+		1908B81024819E9C00E37069 /* StatsUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatsUIViewController.swift; path = /Users/matthewmanning/Downloads/pushupsquad1/pushupsquad1/StatsUIViewController.swift; sourceTree = "<absolute>"; };
 		190A41EB245E1206009A9C79 /* Pushup Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pushup Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		190A41EE245E1206009A9C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		190A41F0245E1206009A9C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				1908B80A2480ECC500E37069 /* apple.png */,
 				190A42282464FCF5009A9C79 /* StatsViewController.swift */,
 				190A42262464FBBD009A9C79 /* AwardsViewController.swift */,
+				1908B81024819E9C00E37069 /* StatsUIViewController.swift */,
 				190A41EE245E1206009A9C79 /* AppDelegate.swift */,
 				1908B80C2481502900E37069 /* blacksquareapple.png */,
 				190A41F0245E1206009A9C79 /* SceneDelegate.swift */,
@@ -358,6 +361,7 @@
 				190A42252464F865009A9C79 /* ProfileViewController.swift in Sources */,
 				19193997246B3FFE008FE2AE /* DateExtensions.swift in Sources */,
 				190A41F1245E1206009A9C79 /* SceneDelegate.swift in Sources */,
+				1908B81124819E9C00E37069 /* StatsUIViewController.swift in Sources */,
 				190A42292464FCF5009A9C79 /* StatsViewController.swift in Sources */,
 				1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */,
 				190A42272464FBBD009A9C79 /* AwardsViewController.swift in Sources */,

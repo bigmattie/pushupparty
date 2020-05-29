@@ -55,6 +55,7 @@ class StatsViewController: UIViewController {
         title = "Stats" //Title of Page
         let user = Auth.auth().currentUser //Get current User
         let uid = user?.uid ?? " " //Get UID
+        
         //set variables for each days total count
         MondayCountValue = 0
         TuesdayCountValue = 0

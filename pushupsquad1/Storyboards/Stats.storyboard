@@ -402,10 +402,10 @@
             </objects>
             <point key="canvasLocation" x="-181.15942028985509" y="929.46428571428567"/>
         </scene>
-        <!--Stats-->
+        <!--StatsUI View Controller-->
         <scene sceneID="aMe-wL-ycx">
             <objects>
-                <viewController title="Stats" id="Iza-bd-pFQ" sceneMemberID="viewController">
+                <viewController id="Iza-bd-pFQ" customClass="StatsUIViewController" customModule="Pushup_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohi-gR-1ET">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,11 +414,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="726"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mex-dR-DoL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="706"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuZ-eQ-2yy" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuZ-eQ-2yy" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="34"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Record Pushups">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -427,19 +428,19 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count pushups with the automated counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z24-hP-YXe">
-                                                <rect key="frame" x="60.333333333333343" y="72" width="293.66666666666663" height="18"/>
+                                                <rect key="frame" x="60.333333333333343" y="72.666666666666671" width="293.66666666666663" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-bt-Ny7">
-                                                <rect key="frame" x="155" y="133.66666666666666" width="104" height="26.333333333333343"/>
+                                                <rect key="frame" x="155" y="133.33333333333334" width="104" height="26.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-Jt-Xx2" userLabel="Sunday Progress bar">
-                                                <rect key="frame" x="20" y="204" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="202.33333333333334" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-gP-v3M">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -465,7 +466,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-Dw-BNL" userLabel="Monday Progress bar">
-                                                <rect key="frame" x="20" y="270" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="267" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-0u-n90">
                                                         <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="18"/>
@@ -491,7 +492,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-Xp-elP" userLabel="Tuesday Progress bar">
-                                                <rect key="frame" x="20" y="336" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="332" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0rw-FB-mXs">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -517,7 +518,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-EY-FIw" userLabel="Wednesday Progress bar">
-                                                <rect key="frame" x="20" y="402" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="396.66666666666669" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="UNg-3C-fYD">
                                                         <rect key="frame" x="0.0" y="0.0" width="14.333333333333334" height="18"/>
@@ -543,7 +544,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HtJ-qS-8rt" userLabel="Thursday Progress bar">
-                                                <rect key="frame" x="20" y="468" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="461.33333333333331" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1RH-HP-zrS">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -569,7 +570,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-ZR-Qex" userLabel="Friday Progress bar">
-                                                <rect key="frame" x="20" y="534" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="526.33333333333337" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-bv-BhR">
                                                         <rect key="frame" x="0.0" y="0.0" width="8.3333333333333339" height="18"/>
@@ -595,7 +596,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zn-TD-D5A" userLabel="Saturday Progress bar">
-                                                <rect key="frame" x="20" y="600" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="591" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pX3-MD-Jse">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -621,10 +622,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="LaL-Da-Clw" userLabel="Overall Bottom Stack View">
-                                                <rect key="frame" x="20" y="661.66666666666663" width="374" height="26.333333333333371"/>
+                                                <rect key="frame" x="20" y="651.66666666666663" width="374" height="26.333333333333371"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tFl-bb-Tsr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="26.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tFl-bb-Tsr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="26.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -638,7 +639,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ZNb-hC-Gym" userLabel="Overall Description Stack (Bottom)">
-                                                <rect key="frame" x="20" y="698" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="688" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... Pushups ...min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dnr-Lr-eLx">
                                                         <rect key="frame" x="0.0" y="0.0" width="115" height="18"/>
@@ -683,7 +684,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="mex-dR-DoL" firstAttribute="leading" secondItem="SeN-f9-IE9" secondAttribute="leading" id="DmW-t8-NhH"/>
-                                    <constraint firstItem="mex-dR-DoL" firstAttribute="top" secondItem="SeN-f9-IE9" secondAttribute="top" id="GSl-2R-iMc"/>
+                                    <constraint firstItem="mex-dR-DoL" firstAttribute="top" secondItem="SeN-f9-IE9" secondAttribute="top" constant="10" id="GSl-2R-iMc"/>
                                     <constraint firstAttribute="bottom" secondItem="mex-dR-DoL" secondAttribute="bottom" constant="10" id="bUA-0J-28J"/>
                                     <constraint firstAttribute="trailing" secondItem="mex-dR-DoL" secondAttribute="trailing" id="v0R-6I-P8i"/>
                                 </constraints>
@@ -699,6 +700,25 @@
                         <viewLayoutGuide key="safeArea" id="YnR-NA-sVl"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kla-jM-icQ"/>
+                    <connections>
+                        <outlet property="allTimeTotalLabel" destination="8Mo-ae-ch3" id="Q2f-Hl-gCV"/>
+                        <outlet property="currentMonthLabel" destination="tFl-bb-Tsr" id="1qy-TC-ozr"/>
+                        <outlet property="currentMonthTotalLabel" destination="dnr-Lr-eLx" id="opv-TY-WeJ"/>
+                        <outlet property="fridayProgressBar" destination="fIU-gS-SDT" id="NFR-5l-0z9"/>
+                        <outlet property="fridayTotalLabel" destination="tTZ-jn-SPa" id="K4f-Qc-Dfj"/>
+                        <outlet property="mondayProgressBar" destination="eJR-Cg-22l" id="9vs-Jy-RUh"/>
+                        <outlet property="mondayTotalLabel" destination="39A-PW-VKI" id="gAs-oK-Qya"/>
+                        <outlet property="saturdayProgressBar" destination="h8k-JV-iQu" id="5Wf-rQ-h1o"/>
+                        <outlet property="saturdayTotalLabel" destination="Y7Z-5y-1AO" id="vxq-aK-5cu"/>
+                        <outlet property="sundayProgressBar" destination="hPm-KV-EgL" id="RfS-U4-rx6"/>
+                        <outlet property="sundayTotalLabel" destination="yQQ-fK-GGY" id="pTd-Uk-4If"/>
+                        <outlet property="thursdayProgressBar" destination="euY-F1-slz" id="IWA-Jl-W2M"/>
+                        <outlet property="thursdayTotalLabel" destination="nqi-Rj-v2w" id="F7q-DM-AZl"/>
+                        <outlet property="tuesdayProgressBar" destination="I0x-5y-L9D" id="A6b-b8-pUN"/>
+                        <outlet property="tuesdayTotalLabel" destination="S0p-3o-WWO" id="Nxv-ts-Kxw"/>
+                        <outlet property="wednesdayProgressBar" destination="DHz-0i-cHg" id="df3-wS-mCC"/>
+                        <outlet property="wednesdayTotalLabel" destination="OCV-sS-jD1" id="NUa-0a-cLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cv9-v7-laE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
