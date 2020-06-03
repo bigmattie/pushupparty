@@ -7,28 +7,43 @@
 //
 
 import UIKit
+import SafariServices
 
 class AwardsViewController: UIViewController {
     
     @IBOutlet weak var browseDailyButton: UIButton!
-    let backgroundImageView = UIImageView()
+    @IBOutlet weak var mainTableView: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    var challenges: [String] = ["Booty","Bootyx"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Challenges"
-                
         browseDailyButton.isHidden = true
-        
-        
+
+       challenges.append("Obama")
+
+       
         // Do any additional setup after loading the view.
     }
-    
-
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+           print("Not printing")
+           print(challenges)
+           return challenges.count
+           
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+           print(indexPath)
+           let challengeTitle = challenges[indexPath.row]
+           let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell") as! VideoCell
+           cell.videoTitle.text = challengeTitle
+           return cell
+       }
     @IBAction func tappedBrowseDaily(_ sender: Any) {
-                if let url = URL(string: "https://bit.ly/2LTRD7t") {
-            UIApplication.shared.open(url)
-        }
+
+        
     }
     @IBAction func tappedInviteFriend(_ sender: Any) {
         let tryItURL = "https://bit.ly/pushuppartyapp" //Update to appstore URL
@@ -39,11 +54,31 @@ class AwardsViewController: UIViewController {
     /*
      // MARK: - Navigation
      
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
      */
     
+}
+
+extension AwardsViewController: UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print("Not printing")
+//        print(challenges)
+//        return challenges.count
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        print(indexPath)
+//        let challengeTitle = challenges[indexPath.row]
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell") as! VideoCell
+//        cell.videoTitle.text = challengeTitle
+//        return cell
+//    }
+//
+    
+    
+}
+
+class VideoCell: UITableViewCell {
+
+    @IBOutlet weak var videoTitle: UILabel!
 }

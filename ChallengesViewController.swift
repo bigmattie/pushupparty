@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ChallengesViewController: UIViewController {
+class ChallengesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Challenges"
         // Do any additional setup after loading the view.
     }
     

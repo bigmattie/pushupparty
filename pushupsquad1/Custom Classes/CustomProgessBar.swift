@@ -23,7 +23,7 @@ class CustomProgessBar: UIProgressView {
     //setup BUtton to set up configuration for button
      func setupButton() {
        transform = transform.scaledBy(x: 1, y: 5)
-                 
+
          
      }
     

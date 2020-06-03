@@ -40,7 +40,11 @@
 		196C5BB8247DD4620031A182 /* pushupDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 196C5BB7247DD45F0031A182 /* pushupDemo.gif */; };
 		196C5BBA247DD8290031A182 /* swirl.gif in Resources */ = {isa = PBXBuildFile; fileRef = 196C5BB9247DD8290031A182 /* swirl.gif */; };
 		197043662478868500305AAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 197043652478868500305AAE /* GoogleService-Info.plist */; };
+		19CAF0172482DE07004F8862 /* F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 19CAF0162482DE06004F8862 /* F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG */; };
+		19CAF01924831780004F8862 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAF01824831780004F8862 /* ChallengesViewController.swift */; };
+		19CAF01B24834775004F8862 /* n.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 19CAF01A24834772004F8862 /* n.JPG */; };
 		19D20C79246624D4004D9E92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D20C78246624D3004D9E92 /* LoginViewController.swift */; };
+		19E2A69F248725D9004DE637 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E2A69E248725CA004DE637 /* SpinnerViewController.swift */; };
 		70D9043A6A67DFA5DF20BEBB /* Pods_pushupsquad1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19D585189376389ECAB6447 /* Pods_pushupsquad1.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +85,11 @@
 		196C5BB7247DD45F0031A182 /* pushupDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushupDemo.gif; path = ../../pushupDemo.gif; sourceTree = "<group>"; };
 		196C5BB9247DD8290031A182 /* swirl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = swirl.gif; path = ../../swirl.gif; sourceTree = "<group>"; };
 		197043652478868500305AAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19CAF0162482DE06004F8862 /* F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG"; path = "../../F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG"; sourceTree = "<group>"; };
+		19CAF01824831780004F8862 /* ChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
+		19CAF01A24834772004F8862 /* n.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = n.JPG; path = ../../n.JPG; sourceTree = "<group>"; };
 		19D20C78246624D3004D9E92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		19E2A69E248725CA004DE637 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		84F202D01D8A4961C28A0F7D /* Pods-pushupsquad1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushupsquad1.release.xcconfig"; path = "Target Support Files/Pods-pushupsquad1/Pods-pushupsquad1.release.xcconfig"; sourceTree = "<group>"; };
 		DA2F69B79F2003D5593E36A7 /* Pods-pushupsquad1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pushupsquad1.debug.xcconfig"; path = "Target Support Files/Pods-pushupsquad1/Pods-pushupsquad1.debug.xcconfig"; sourceTree = "<group>"; };
 		E19D585189376389ECAB6447 /* Pods_pushupsquad1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pushupsquad1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +119,7 @@
 		190A41E2245E1205009A9C79 = {
 			isa = PBXGroup;
 			children = (
+				19CAF01824831780004F8862 /* ChallengesViewController.swift */,
 				190A41ED245E1206009A9C79 /* pushupsquad1 */,
 				190A41EC245E1206009A9C79 /* Products */,
 				1379977F12264BEE11E208DB /* Pods */,
@@ -132,17 +141,20 @@
 				1908B7FF24808C0900E37069 /* Pushup Party.entitlements */,
 				196C5BAE247C3A180031A182 /* Custom Classes */,
 				190A42242464F865009A9C79 /* ProfileViewController.swift */,
+				196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */,
 				191939B1246F4A0B008FE2AE /* Storyboards */,
 				191939B0246F49DE008FE2AE /* Custom Extensions */,
 				191939A8246F07D9008FE2AE /* 338F904C-67B0-4C56-B501-2929B97B2FA5.PNG */,
 				191939A9246F07DA008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG */,
 				1908B80A2480ECC500E37069 /* apple.png */,
 				190A42282464FCF5009A9C79 /* StatsViewController.swift */,
+				19CAF0162482DE06004F8862 /* F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG */,
 				190A42262464FBBD009A9C79 /* AwardsViewController.swift */,
 				1908B81024819E9C00E37069 /* StatsUIViewController.swift */,
 				190A41EE245E1206009A9C79 /* AppDelegate.swift */,
 				1908B80C2481502900E37069 /* blacksquareapple.png */,
 				190A41F0245E1206009A9C79 /* SceneDelegate.swift */,
+				19CAF01A24834772004F8862 /* n.JPG */,
 				190A41F2245E1206009A9C79 /* ViewController.swift */,
 				191399DA246643FD0081F99F /* TabViewController.swift */,
 				19167AB8247A23A7002F33EE /* 1024.png */,
@@ -156,6 +168,7 @@
 				1919399F246CDAFE008FE2AE /* 149-1491934_fitness-test-women-working-out-black-and-white.png */,
 				19193994246A3468008FE2AE /* confetti.png */,
 				190A41FC245E121B009A9C79 /* Info.plist */,
+				19E2A69E248725CA004DE637 /* SpinnerViewController.swift */,
 			);
 			path = pushupsquad1;
 			sourceTree = "<group>";
@@ -187,7 +200,6 @@
 		196C5BAE247C3A180031A182 /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
-				196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */,
 				196C5BB3247C6CBC0031A182 /* CustomProgessBar.swift */,
 			);
 			path = "Custom Classes";
@@ -265,6 +277,7 @@
 				191939AA246F07DB008FE2AE /* 338F904C-67B0-4C56-B501-2929B97B2FA5.PNG in Resources */,
 				190A41FB245E121B009A9C79 /* LaunchScreen.storyboard in Resources */,
 				191939A7246E21E9008FE2AE /* Stats.storyboard in Resources */,
+				19CAF01B24834775004F8862 /* n.JPG in Resources */,
 				191939A3246E1B91008FE2AE /* Challenges.storyboard in Resources */,
 				1908B80B2480ECC500E37069 /* apple.png in Resources */,
 				1919399C246C7992008FE2AE /* PushupCounter.storyboard in Resources */,
@@ -277,6 +290,7 @@
 				1908B80D2481502900E37069 /* blacksquareapple.png in Resources */,
 				191939A5246E1EE7008FE2AE /* 88-886971_clip-art-push-up-silhouette-black-women-working.png in Resources */,
 				19167AB9247A23A7002F33EE /* 1024.png in Resources */,
+				19CAF0172482DE07004F8862 /* F0316FA8-4E68-4B57-8641-E4DC8D275FCF.PNG in Resources */,
 				190A41F6245E1206009A9C79 /* Main.storyboard in Resources */,
 				191939AB246F07DB008FE2AE /* A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG in Resources */,
 				196C5BBA247DD8290031A182 /* swirl.gif in Resources */,
@@ -356,6 +370,7 @@
 				190A41F3245E1206009A9C79 /* ViewController.swift in Sources */,
 				191939AD246F46A9008FE2AE /* UIImageExtension.swift in Sources */,
 				196C5BB4247C6CBC0031A182 /* CustomProgessBar.swift in Sources */,
+				19E2A69F248725D9004DE637 /* SpinnerViewController.swift in Sources */,
 				190A41EF245E1206009A9C79 /* AppDelegate.swift in Sources */,
 				196C5BB2247C5ADC0031A182 /* CustomUIButtom.swift in Sources */,
 				190A42252464F865009A9C79 /* ProfileViewController.swift in Sources */,
@@ -364,6 +379,7 @@
 				1908B81124819E9C00E37069 /* StatsUIViewController.swift in Sources */,
 				190A42292464FCF5009A9C79 /* StatsViewController.swift in Sources */,
 				1908B7FA247F329600E37069 /* TimeExtensions.swift in Sources */,
+				19CAF01924831780004F8862 /* ChallengesViewController.swift in Sources */,
 				190A42272464FBBD009A9C79 /* AwardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,7 +535,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "pushupsquad1/Pushup Party.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
 				INFOPLIST_FILE = pushupsquad1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -527,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.131;
+				MARKETING_VERSION = 1.141;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushup.party;
 				PRODUCT_NAME = "Pushup Party";
 				SWIFT_VERSION = 5.0;
@@ -542,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "pushupsquad1/Pushup Party.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = EEBL6N8ZQD;
 				INFOPLIST_FILE = pushupsquad1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -550,7 +566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.131;
+				MARKETING_VERSION = 1.141;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushup.party;
 				PRODUCT_NAME = "Pushup Party";
 				SWIFT_VERSION = 5.0;

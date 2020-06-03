@@ -10,7 +10,6 @@
         <!--Stats-->
         <scene sceneID="ZrQ-CJ-qQJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t4Q-pb-piQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Stats" modalPresentationStyle="fullScreen" id="u9j-7x-wfx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Uu-6A-lND">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -19,6 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="4au-FA-VNv"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4Q-pb-piQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-181.15942028985509" y="929.46428571428567"/>
         </scene>
@@ -37,26 +37,29 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="798"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-E3-fUe" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="30"/>
+                                                <rect key="frame" x="20" y="0.0" width="374" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="mH1-3T-Bzj"/>
+                                                </constraints>
                                                 <state key="normal" title="Record Pushups">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count pushups with the automated counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-5W-tXm">
-                                                <rect key="frame" x="60.5" y="55" width="293.5" height="18"/>
+                                                <rect key="frame" x="60.5" y="75" width="293.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="C25-QR-uvn">
-                                                <rect key="frame" x="155" y="100" width="104" height="26.5"/>
+                                                <rect key="frame" x="155" y="130" width="104" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nvZ-BR-bth" userLabel="Sunday Progress bar">
-                                                <rect key="frame" x="20" y="153" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="193" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="eYb-SD-9UG">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="18"/>
@@ -82,7 +85,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qdU-pZ-kDU" userLabel="Monday Progress bar">
-                                                <rect key="frame" x="20" y="202" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="252" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hb1-k4-40b">
                                                         <rect key="frame" x="0.0" y="0.0" width="13" height="18"/>
@@ -108,7 +111,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-bm-O8O" userLabel="Tuesday Progress bar">
-                                                <rect key="frame" x="20" y="251" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="311" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="gPN-Yh-WBL">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="18"/>
@@ -134,7 +137,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Upa-rg-kaz" userLabel="Wednesday Progress bar">
-                                                <rect key="frame" x="20" y="300" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="370" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-7n-XQD">
                                                         <rect key="frame" x="0.0" y="0.0" width="14.5" height="18"/>
@@ -160,7 +163,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="umY-Di-VTw" userLabel="Thursday Progress bar">
-                                                <rect key="frame" x="20" y="349" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="429" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YcX-mh-vFO">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="18"/>
@@ -186,7 +189,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nit-yb-Q6P" userLabel="Friday Progress bar">
-                                                <rect key="frame" x="20" y="398" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="488" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="JyH-vs-4nx">
                                                         <rect key="frame" x="0.0" y="0.0" width="8.5" height="18"/>
@@ -212,7 +215,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4bR-Ji-bWv" userLabel="Saturday Progress bar">
-                                                <rect key="frame" x="20" y="447" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="547" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="leM-Gc-lcS">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.5" height="18"/>

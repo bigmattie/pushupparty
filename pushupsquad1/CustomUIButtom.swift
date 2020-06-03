@@ -24,9 +24,9 @@ class CustomUIButton: UIButton {
    //setup BUtton to set up configuration for button
     func setupButton() {
 //        backgroundColor = UIColor.systemGreen
-        layer.cornerRadius = 10
+        layer.cornerRadius = 5
         layer.opacity = 0.95
-        titleLabel?.font =  UIFont(name: "System Semibold", size: 22)
+//        titleLabel?.font =  UIFont(name: "System", size: 24)
 
 
         

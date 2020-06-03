@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         newPushups = 0
         counter = 0
         oldPushups = 0
-        counter = 0.0
+        counter = 0.5
         allPushupsTime = 0
         allPushups = 0
         selectedMode = 0
@@ -174,8 +174,7 @@ class ViewController: UIViewController {
         setConfettiBackground()
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
-        //        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-        //        AudioServicesPlaySystemSound (1003);
+
         
     }
     
@@ -189,9 +188,9 @@ class ViewController: UIViewController {
     //Help Button
     @IBAction func helpButtonTapped(_ sender: Any) {
         
-        let alert = UIAlertController(title: "How does it work?", message: "Place your phone under your chest, press start, then perform a pushup", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style:.cancel, handler: nil))
-        self.present(alert, animated: true)
+//        let alert = UIAlertController(title: "How does it work?", message: "Place your phone under your chest, press start, then perform a pushup", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Okay", style:.cancel, handler: nil))
+//        self.present(alert, animated: true)
     }
     
     //Segemented Controls (Pushup Options)

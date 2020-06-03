@@ -35,7 +35,7 @@ extension Date {
 //        // start with today
 //        var date = cal.date(byAdding: Calendar.Component.day, value: +1, to: Date())!
 //
-//        var arrDates = [String]()
+//        var arrDates = [String:Date()]()
 //
 //        for _ in 1 ... nDays {
 //            // move back in time by one day:

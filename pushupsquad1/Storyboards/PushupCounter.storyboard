@@ -20,7 +20,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Vx-ZM-1ND"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zJR-KV-4dV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8j-q1-euC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Qgw-Mt-5fY">
-                                <rect key="frame" x="20" y="106.5" width="374" height="737"/>
+                                <rect key="frame" x="20" y="88.5" width="374" height="773"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kEv-52-UPo">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="210"/>
@@ -90,8 +90,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQq-fa-cLT" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="597" width="374" height="38"/>
+                                        <rect key="frame" x="0.0" y="597" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RqI-eb-DJd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <state key="normal" title="START">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,8 +104,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3V-Yl-i2K" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="648" width="374" height="38"/>
+                                        <rect key="frame" x="0.0" y="660" width="374" height="50"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZHm-g6-TSc"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="FINISH">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,8 +118,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YP-3b-84h" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="699" width="374" height="38"/>
+                                        <rect key="frame" x="0.0" y="723" width="374" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BTz-4t-LVc"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
                                         <state key="normal" title="DISMISS">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,6 +153,7 @@
                             <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             <connections>
                                 <action selector="helpButtonTapped:" destination="BYZ-38-t0r" id="DRv-Eo-NVi"/>
+                                <segue destination="fLF-GH-fzt" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="tF4-ec-gdB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -158,7 +168,6 @@
                         <outlet property="segmentControlModes" destination="ftZ-HE-0uO" id="6MG-Ss-tBu"/>
                         <outlet property="startButton" destination="sQq-fa-cLT" id="jIE-7x-OJi"/>
                         <outlet property="timeLabel" destination="NzT-OJ-o2m" id="XTD-06-bje"/>
-                        <outlet property="topLabel" destination="e3Q-qD-IyE" id="pZo-dH-0uv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -170,40 +179,36 @@
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="fLF-GH-fzt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aTY-1z-w0v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-D2-ika">
-                                <rect key="frame" x="231" y="169" width="140" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-qc-MIR">
+                                <rect key="frame" x="20" y="20" width="374" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="&gt;">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1e-8t-KkD">
-                                <rect key="frame" x="137" y="337" width="140" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Help?">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Place the deivce under your stomach and the pushup counter will count each time your body touches the device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-qD-IyE">
-                                <rect key="frame" x="57" y="229" width="314" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="V77-wd-Ghh"/>
+                                    <constraint firstAttribute="height" constant="50" id="kEj-5n-NOy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Return to Pushups">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="dql-Eb-A8K">
+                                <rect key="frame" x="20" y="90" width="374" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dql-Eb-A8K" secondAttribute="height" multiplier="16:9" id="JLT-Ev-9u5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dql-Eb-A8K" firstAttribute="top" secondItem="ldh-qc-MIR" secondAttribute="bottom" constant="20" id="5lK-ml-MBN"/>
+                            <constraint firstItem="ldh-qc-MIR" firstAttribute="top" secondItem="igi-AG-z9M" secondAttribute="top" constant="20" id="6J3-Sm-vh0"/>
+                            <constraint firstItem="ldh-qc-MIR" firstAttribute="leading" secondItem="igi-AG-z9M" secondAttribute="leading" constant="20" id="FB1-NX-Rql"/>
+                            <constraint firstItem="igi-AG-z9M" firstAttribute="trailing" secondItem="ldh-qc-MIR" secondAttribute="trailing" constant="20" id="FeL-XH-moZ"/>
+                            <constraint firstItem="igi-AG-z9M" firstAttribute="trailing" secondItem="dql-Eb-A8K" secondAttribute="trailing" constant="20" id="Q8d-fh-Iih"/>
+                            <constraint firstItem="dql-Eb-A8K" firstAttribute="leading" secondItem="igi-AG-z9M" secondAttribute="leading" constant="20" id="bue-ji-M6c"/>
+                            <constraint firstItem="dql-Eb-A8K" firstAttribute="width" secondItem="dql-Eb-A8K" secondAttribute="height" multiplier="16:9" id="qgW-k7-yOl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="igi-AG-z9M"/>
                     </view>
                 </viewController>
@@ -212,4 +217,7 @@
             <point key="canvasLocation" x="487" y="1377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG" width="900" height="420"/>
+    </resources>
 </document>

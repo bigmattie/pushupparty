@@ -14,6 +14,7 @@ import CryptoKit
 
 
 class LoginViewController: UIViewController {
+    var child: SpinnerViewController!
     
     var handle: AuthStateDidChangeListenerHandle?
     var spinner = UIActivityIndicatorView(style: .whiteLarge)
@@ -46,67 +47,96 @@ class LoginViewController: UIViewController {
       return hashString
     }
     
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var guestLoginButton: UIButton!
     @IBOutlet weak var facebookLoginButton: UIButton!
     @IBOutlet weak var appleLoginButton: UIButton!
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var subtitleLable: UILabel!
+    @IBAction func guestLoginButton(_ sender: Any) {
+    }
+    @IBOutlet weak var loadingVIew: UIView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //Hide facebook button
-        #if DEBUG
-        facebookLoginButton.isHidden = false
-        appleLoginButton.isHidden = false
-        #else
-        facebookLoginButton.isHidden = false
-        appleLoginButton.isHidden = false
-        #endif
-//       appleLoginButton.setImage(UIImage(named: "apple.png"), for: .normal)
-//       appleLoginButton.imageView?.contentMode = .scaleAspectFit
-//       appleLoginButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+       // #if DEBUG
+      //  facebookLoginButton.isHidden = false
+        
+     //   #else
+       // facebookLoginButton.isHidden = false
+        
 
-
-
+       // #endif
         
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in //listen for state chang on auth
                   if user == nil {
                     //if no user object do nothing which means we dont have an active session
+                    
                  } else {
                     self.performSegue(withIdentifier: "loginSegue", sender: self) //transitions user to new page
 ///                    self.finishLogin() removed because it was forcing reload
                  }
             }
         performExistingAccountSetupFlows()
-        
+        setupAppleButton()
         
     }
-    
+    func setupAppleButton() {
+        let appleLoginBtn = ASAuthorizationAppleIDButton(type: .continue, style: .white)
+        appleLoginBtn.addTarget(self, action: #selector(appleLogin), for: .touchUpInside)
+        mainView.addSubview(appleLoginBtn)
+        // Setup Layout Constraints to be in the center of the screen
+        appleLoginBtn.translatesAutoresizingMaskIntoConstraints = false
+        appleLoginBtn.centerXAnchor.constraint(equalTo: mainView.centerXAnchor).isActive = true
+        appleLoginBtn.topAnchor.constraint(equalTo: facebookLoginButton.bottomAnchor, constant: 20).isActive = true
+        appleLoginBtn.widthAnchor.constraint(equalToConstant: 310).isActive = true
+        appleLoginBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
+//        NSLayoutConstraint.activate([
+//            appleLoginBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//            appleLoginBtn.topAnchor.constraint(equalTo: facebookLoginButton.bottomAnchor, constant: 20),
+//
+//            appleLoginBtn.widthAnchor.constraint(equalToConstant: 200),
+//            appleLoginBtn.heightAnchor.constraint(equalToConstant: 40)
+//            ])
+        
+    }
     func finishLogin() {
         performSegue(withIdentifier: "loginSegue", sender: self)
         showLoading(status: false) //stops loading animation
     }
     
     func showLoading(status: Bool) {
-        view = UIView()
+        
+//        let child = SpinnerViewController?
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         
         if (status == true) {
+//            let viewMain = UIView()
             //if loading is true
-               
-                view.backgroundColor = UIColor(white: 0, alpha: 0.65)
-                spinner.translatesAutoresizingMaskIntoConstraints = false
-                spinner.startAnimating()
-                view.addSubview(spinner)
-                spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-                spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//            view.isHidden = false
+//            viewMain.backgroundColor = UIColor(white: 0, alpha: 0.65)
+//                spinner.translatesAutoresizingMaskIntoConstraints = false
+//                spinner.startAnimating()
+//                viewMain.addSubview(spinner)
+//                spinner.centerXAnchor.constraint(equalTo: viewMain.centerXAnchor).isActive = true
+//                spinner.centerYAnchor.constraint(equalTo: viewMain.centerYAnchor).isActive = true
+            
+
+            // add the spinner view controller
+
         } else {
+ 
             //if loading is not true
-            print("NOT DOING SHIT NOT LOADING")
-            spinner.removeFromSuperview()
-            self.loadView() //refreshview
+            // then remove the spinner view controller
+
+//            view.setNeedsDisplay()
+//            print("NOT DOING SHIT NOT LOADING")
+
         }
         
     }
@@ -115,9 +145,9 @@ class LoginViewController: UIViewController {
     //
     /// - Tag: add_appleid_button
     func setupProviderLoginView() {
-        let authorizationButton = ASAuthorizationAppleIDButton()
-        view.addSubview(authorizationButton)
-        appleLoginButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
+//        let authorizationButton = ASAuthorizationAppleIDButton()
+//        view.addSubview(authorizationButton)
+//        appleLoginButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
 //        self.loginProviderStackView.addArrangedSubview(authorizationButton)
     }
     
@@ -141,7 +171,7 @@ class LoginViewController: UIViewController {
 //        let appleIDProvider = ASAuthorizationAppleIDProvider()
 //        let request = appleIDProvider.createRequest()
 //        request.requestedScopes = [.fullName, .email]
-        showLoading(status: true)
+//        showLoading(status: true)
         let nonce = randomNonceString()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -153,6 +183,7 @@ class LoginViewController: UIViewController {
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
+        
     }
     
     //
@@ -160,14 +191,14 @@ class LoginViewController: UIViewController {
     //
     func anonSignIn(_ sender: Any) {
        Auth.auth().signInAnonymously() { (authResult, error) in
+
         self.finishLogin() //transitions user to app and kills animation
-       }
-      
+        }
     }
     func showGuestLoginActionSheet() {
     let optionMenu = UIAlertController(title: "Continue as a Guest", message: "If you continue your Stats may not be saved but, you can test the app", preferredStyle: .alert)
         let deleteAction = UIAlertAction(title: "Continue", style: .default, handler: anonSignIn)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: refreshView(_:)) //refresh view to stop the loading
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil) //refresh view to stop the loading
     optionMenu.addAction(deleteAction)
     optionMenu.addAction(cancelAction)
     self.present(optionMenu, animated: true, completion: nil)
@@ -177,6 +208,8 @@ class LoginViewController: UIViewController {
         self.loadView() //refreshs view
     }
     @IBAction func guestLogin(_ sender: Any) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
         showLoading(status: true)
         showGuestLoginActionSheet()
         
@@ -187,7 +220,9 @@ class LoginViewController: UIViewController {
         showLoading(status: true)
         LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
           if let error = error {
-            self.showLoading(status: false)
+                        self.showLoading(status: false)
+            
+
             print("Failed to login: \(error.localizedDescription)")
             return
           }
@@ -269,7 +304,8 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
           // Error. If error.code == .MissingOrInvalidNonce, make sure
           // you're sending the SHA256-hashed nonce as a hex string with
           // your request to Apple.
-            self.showLoading(status: false)
+            print("Signed in apple user")
+            self.finishLogin()
           print(error?.localizedDescription)
           return
         }

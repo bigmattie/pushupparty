@@ -17,12 +17,21 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var displayNameText: UILabel!
     @IBOutlet weak var creationDateText: UILabel!
+    @IBOutlet weak var buildVersion: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
             title = "Profile"
+        buildVersion.text = "App Version: " + String(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "-.--")
+       
         let user = Auth.auth().currentUser
         let uid = user?.uid ?? " "
-        displayNameText.text = user?.displayName ?? "Unkown User"
+        displayNameText.text = user?.displayName ?? "Unknown User"
+        let isAnon = user?.isAnonymous
+        if (isAnon == true)
+        {
+            displayNameText.text = "Guest User"
+        }
+        
        let creationDate = user?.metadata.creationDate
                let dateFormatter = DateFormatter()
                dateFormatter.dateFormat = "MMMM YYYY" //Joined April 2020
@@ -57,7 +66,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func userSignOutTapped(_ sender: Any) {
         // Create UIAlertController
-        let optionMenu = UIAlertController(title: nil, message: "Are you sure you want to log out?", preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title: "Continue with Log Out?", message: "If you are logged in as a Guest User then you wont be able to get your stats back", preferredStyle: .alert)
         // Declare Actions
         let deleteAction = UIAlertAction(title: "Log Out", style: .destructive, handler: signOut) //Sign out method called later
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
