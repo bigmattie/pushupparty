@@ -182,6 +182,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="dql-Eb-A8K">
+                                <rect key="frame" x="20" y="90" width="374" height="210.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dql-Eb-A8K" secondAttribute="height" multiplier="16:9" id="JLT-Ev-9u5"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldh-qc-MIR">
                                 <rect key="frame" x="20" y="20" width="374" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -192,12 +198,6 @@
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A5993A27-2482-42F9-B2D4-BB2812D6BF25.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="dql-Eb-A8K">
-                                <rect key="frame" x="20" y="90" width="374" height="210.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dql-Eb-A8K" secondAttribute="height" multiplier="16:9" id="JLT-Ev-9u5"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

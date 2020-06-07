@@ -95,8 +95,8 @@ class LoginViewController: UIViewController {
         appleLoginBtn.translatesAutoresizingMaskIntoConstraints = false
         appleLoginBtn.centerXAnchor.constraint(equalTo: mainView.centerXAnchor).isActive = true
         appleLoginBtn.topAnchor.constraint(equalTo: facebookLoginButton.bottomAnchor, constant: 30).isActive = true
-        appleLoginBtn.widthAnchor.constraint(equalToConstant: 310).isActive = true
-        appleLoginBtn.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        appleLoginBtn.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        appleLoginBtn.heightAnchor.constraint(equalToConstant: 45).isActive = true
 //        NSLayoutConstraint.activate([
 //            appleLoginBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
 //            appleLoginBtn.topAnchor.constraint(equalTo: facebookLoginButton.bottomAnchor, constant: 20),

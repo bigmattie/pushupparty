@@ -416,14 +416,42 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mex-dR-DoL">
                                         <rect key="frame" x="0.0" y="10" width="414" height="706"/>
                                         <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4bM-VU-oyY" userLabel="NoPushup">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="184"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jinx.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-iD-Dut">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="184"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="184" id="9T5-6e-AtN"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zbk-lc-ncR">
+                                                        <rect key="frame" x="189.66666666666663" y="27.333333333333329" width="184.33333333333337" height="129.66666666666669"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't done pushups this week" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-fK-m5b">
+                                                                <rect key="frame" x="4.3333333333333428" y="0.0" width="175.66666666666666" height="48"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get started by placing your phone under your lower chest &amp; recording some pushups." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-LP-9Ie">
+                                                                <rect key="frame" x="0.0" y="57.999999999999993" width="184.33333333333334" height="71.666666666666657"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuZ-eQ-2yy" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="194" width="374" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ouW-iq-2ZA"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Record Pushups">
+                                                <state key="normal" title="   Record Pushups" image="smallcircle.circle.fill" catalog="system">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -431,19 +459,19 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count pushups with the automated counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z24-hP-YXe">
-                                                <rect key="frame" x="60.333333333333343" y="80" width="293.66666666666663" height="18"/>
+                                                <rect key="frame" x="60.333333333333343" y="254" width="293.66666666666663" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-bt-Ny7">
-                                                <rect key="frame" x="155" y="139.66666666666666" width="104" height="26.333333333333343"/>
+                                                <rect key="frame" x="155" y="377" width="104" height="26.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-Jt-Xx2" userLabel="Sunday Progress bar">
-                                                <rect key="frame" x="20" y="208" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="455.66666666666669" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-gP-v3M">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -469,7 +497,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-Dw-BNL" userLabel="Monday Progress bar">
-                                                <rect key="frame" x="20" y="272" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="483.66666666666669" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-0u-n90">
                                                         <rect key="frame" x="0.0" y="0.0" width="12.666666666666666" height="18"/>
@@ -495,7 +523,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-Xp-elP" userLabel="Tuesday Progress bar">
-                                                <rect key="frame" x="20" y="336" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="511.66666666666663" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0rw-FB-mXs">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -521,7 +549,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-EY-FIw" userLabel="Wednesday Progress bar">
-                                                <rect key="frame" x="20" y="400" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="539.66666666666663" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="UNg-3C-fYD">
                                                         <rect key="frame" x="0.0" y="0.0" width="14.333333333333334" height="18"/>
@@ -547,7 +575,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HtJ-qS-8rt" userLabel="Thursday Progress bar">
-                                                <rect key="frame" x="20" y="464" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="567.66666666666663" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1RH-HP-zrS">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -573,7 +601,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-ZR-Qex" userLabel="Friday Progress bar">
-                                                <rect key="frame" x="20" y="528" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="595.66666666666663" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-bv-BhR">
                                                         <rect key="frame" x="0.0" y="0.0" width="8.3333333333333339" height="18"/>
@@ -599,7 +627,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zn-TD-D5A" userLabel="Saturday Progress bar">
-                                                <rect key="frame" x="20" y="592" width="374" height="18"/>
+                                                <rect key="frame" x="20" y="623.66666666666663" width="374" height="18"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pX3-MD-Jse">
                                                         <rect key="frame" x="0.0" y="0.0" width="9.3333333333333339" height="18"/>
@@ -672,12 +700,15 @@
                                             <constraint firstAttribute="trailing" secondItem="vK4-Xp-elP" secondAttribute="trailing" constant="20" id="FpO-ue-tbL"/>
                                             <constraint firstItem="xqg-Dw-BNL" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="HcM-ve-Oyj"/>
                                             <constraint firstAttribute="trailing" secondItem="HtJ-qS-8rt" secondAttribute="trailing" constant="20" id="Oyr-l0-Ft5"/>
+                                            <constraint firstAttribute="trailing" secondItem="4bM-VU-oyY" secondAttribute="trailing" constant="20" id="ReA-vK-6sK"/>
                                             <constraint firstAttribute="trailing" secondItem="xqg-Dw-BNL" secondAttribute="trailing" constant="20" id="ajp-Rs-kEn"/>
                                             <constraint firstItem="vK4-Xp-elP" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="cY0-65-ItV"/>
                                             <constraint firstItem="ZNb-hC-Gym" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="dWh-gG-Jo5"/>
                                             <constraint firstAttribute="trailing" secondItem="ZNb-hC-Gym" secondAttribute="trailing" constant="20" id="fm3-nT-za4"/>
+                                            <constraint firstItem="Z24-hP-YXe" firstAttribute="top" secondItem="GuZ-eQ-2yy" secondAttribute="bottom" constant="10" id="hQi-4q-mMn"/>
                                             <constraint firstItem="e8k-Jt-Xx2" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="kBI-Gd-aUN"/>
                                             <constraint firstAttribute="trailing" secondItem="2zn-TD-D5A" secondAttribute="trailing" constant="20" id="pYe-8Z-9OT"/>
+                                            <constraint firstItem="4bM-VU-oyY" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="peV-Ja-XyM"/>
                                             <constraint firstAttribute="trailing" secondItem="LaL-Da-Clw" secondAttribute="trailing" constant="20" id="rki-E0-5tB"/>
                                             <constraint firstAttribute="trailing" secondItem="lgw-EY-FIw" secondAttribute="trailing" constant="20" id="vgE-MP-VNi"/>
                                             <constraint firstItem="GuZ-eQ-2yy" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="wOx-Jp-cXa"/>
@@ -708,18 +739,27 @@
                         <outlet property="currentMonthLabel" destination="tFl-bb-Tsr" id="1qy-TC-ozr"/>
                         <outlet property="currentMonthTotalLabel" destination="dnr-Lr-eLx" id="opv-TY-WeJ"/>
                         <outlet property="fridayProgressBar" destination="fIU-gS-SDT" id="NFR-5l-0z9"/>
+                        <outlet property="fridayProgressStack" destination="SdF-ZR-Qex" id="aGQ-1g-4kF"/>
                         <outlet property="fridayTotalLabel" destination="tTZ-jn-SPa" id="K4f-Qc-Dfj"/>
                         <outlet property="mondayProgressBar" destination="eJR-Cg-22l" id="9vs-Jy-RUh"/>
+                        <outlet property="mondayProgressStack" destination="xqg-Dw-BNL" id="RVV-jU-LUh"/>
                         <outlet property="mondayTotalLabel" destination="39A-PW-VKI" id="gAs-oK-Qya"/>
+                        <outlet property="noPushupImg" destination="4bM-VU-oyY" id="E5o-em-bvu"/>
                         <outlet property="saturdayProgressBar" destination="h8k-JV-iQu" id="5Wf-rQ-h1o"/>
+                        <outlet property="saturdayProgressStack" destination="2zn-TD-D5A" id="AFG-mS-4aT"/>
                         <outlet property="saturdayTotalLabel" destination="Y7Z-5y-1AO" id="vxq-aK-5cu"/>
                         <outlet property="sundayProgressBar" destination="hPm-KV-EgL" id="RfS-U4-rx6"/>
+                        <outlet property="sundayProgressStack" destination="e8k-Jt-Xx2" id="SSa-nt-BkV"/>
                         <outlet property="sundayTotalLabel" destination="yQQ-fK-GGY" id="pTd-Uk-4If"/>
+                        <outlet property="thisWeekLabel" destination="Xex-bt-Ny7" id="OW5-Hu-feS"/>
                         <outlet property="thursdayProgressBar" destination="euY-F1-slz" id="IWA-Jl-W2M"/>
+                        <outlet property="thursdayProgressStack" destination="HtJ-qS-8rt" id="gY6-xD-iVP"/>
                         <outlet property="thursdayTotalLabel" destination="nqi-Rj-v2w" id="F7q-DM-AZl"/>
                         <outlet property="tuesdayProgressBar" destination="I0x-5y-L9D" id="A6b-b8-pUN"/>
+                        <outlet property="tuesdayProgressStack" destination="vK4-Xp-elP" id="SbV-kZ-IiC"/>
                         <outlet property="tuesdayTotalLabel" destination="S0p-3o-WWO" id="Nxv-ts-Kxw"/>
                         <outlet property="wednesdayProgressBar" destination="DHz-0i-cHg" id="df3-wS-mCC"/>
+                        <outlet property="wednesdayProgressStack" destination="lgw-EY-FIw" id="Jp4-By-95R"/>
                         <outlet property="wednesdayTotalLabel" destination="OCV-sS-jD1" id="NUa-0a-cLp"/>
                     </connections>
                 </viewController>
@@ -731,4 +771,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="hWJ-oI-5GK"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="jinx.PNG" width="800" height="800"/>
+        <image name="smallcircle.circle.fill" catalog="system" width="32" height="32"/>
+    </resources>
 </document>

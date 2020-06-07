@@ -12,7 +12,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="hometabs" id="ihj-av-5L9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="NP5-g4-VCD"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p7Z-o0-GPq">
+                    <tabBar key="tabBar" alpha="0.59999999999999998" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p7Z-o0-GPq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -21,8 +21,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="CoE-v3-Pcm" kind="relationship" relationship="viewControllers" id="kXM-Cc-b9N"/>
-                        <segue destination="0pA-39-Kpk" kind="relationship" relationship="viewControllers" id="ZuJ-ck-Vwx"/>
-                        <segue destination="tUX-x5-g3M" kind="relationship" relationship="viewControllers" id="BsL-T8-RYf"/>
+                        <segue destination="tUX-x5-g3M" kind="relationship" relationship="viewControllers" id="AD3-HT-D7i"/>
+                        <segue destination="0pA-39-Kpk" kind="relationship" relationship="viewControllers" id="oAg-8L-abD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5if-HL-ZYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,13 +175,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="NEf-Pq-1Fn" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                <rect key="frame" x="52" y="430.5" width="310" height="30"/>
+                                <rect key="frame" x="82" y="430.5" width="250" height="45"/>
                                 <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DjD-Lj-LCI"/>
-                                    <constraint firstAttribute="width" constant="310" id="SLg-FD-AuG"/>
+                                    <constraint firstAttribute="height" constant="45" id="DjD-Lj-LCI"/>
+                                    <constraint firstAttribute="width" constant="250" id="SLg-FD-AuG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="  Continue with Facebook" image="facebook-7-24">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
@@ -206,9 +206,8 @@
                                     <action selector="guestLogin:" destination="Qpb-NB-1Ey" eventType="touchUpInside" id="FoT-hf-7qi"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="C7H-Xr-et9">
-                                <rect key="frame" x="136" y="219" width="142" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="C7H-Xr-et9">
+                                <rect key="frame" x="182.5" y="265.5" width="37" height="37"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -227,6 +226,8 @@
                             <constraint firstItem="spK-vP-QHA" firstAttribute="leading" secondItem="jzX-N8-qn7" secondAttribute="leading" constant="20" id="SOs-XG-IFs"/>
                             <constraint firstItem="7j6-cP-5gb" firstAttribute="centerX" secondItem="KAz-ac-GcM" secondAttribute="centerX" id="SrE-xy-wLn"/>
                             <constraint firstItem="wTJ-gu-nCc" firstAttribute="leading" secondItem="jzX-N8-qn7" secondAttribute="leading" constant="-30" id="cUc-D1-1P5"/>
+                            <constraint firstItem="C7H-Xr-et9" firstAttribute="top" secondItem="wTJ-gu-nCc" secondAttribute="bottom" constant="25" id="rvV-03-lm1"/>
+                            <constraint firstItem="C7H-Xr-et9" firstAttribute="centerX" secondItem="KAz-ac-GcM" secondAttribute="centerX" constant="-6" id="sWB-Jq-KYI"/>
                             <constraint firstItem="jzX-N8-qn7" firstAttribute="trailing" secondItem="aAp-4M-Llp" secondAttribute="trailing" constant="20" id="vbh-7n-bqE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jzX-N8-qn7"/>
@@ -252,7 +253,9 @@
         <scene sceneID="34G-5D-Hho">
             <objects>
                 <navigationController id="tUX-x5-g3M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Challenges" image="rosette" catalog="system" id="aNb-Mf-hY5"/>
+                    <tabBarItem key="tabBarItem" title="Challenges" image="rosette" catalog="system" badgeValue="New" id="aNb-Mf-hY5">
+                        <color key="badgeColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6Zq-Ni-wkw">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -320,6 +323,6 @@
         <image name="n.JPG" width="1241" height="715"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rosette" catalog="system" width="100" height="128"/>
-        <image name="smallcircle.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="smallcircle.circle.fill" catalog="system" width="32" height="32"/>
     </resources>
 </document>

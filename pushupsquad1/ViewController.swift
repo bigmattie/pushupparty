@@ -59,6 +59,7 @@ class ViewController: UIViewController {
         
         let jeremyGif: UIImage = UIImage.gifImageWithName("pushupDemo")!
         demoGif.image = jeremyGif
+        demoGif.isHidden = true
         
         
         optionSelectedText.text = "Normal Mode: as many pushups as you want"
