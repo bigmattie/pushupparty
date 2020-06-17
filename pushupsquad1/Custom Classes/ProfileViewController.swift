@@ -18,9 +18,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var displayNameText: UILabel!
     @IBOutlet weak var creationDateText: UILabel!
     @IBOutlet weak var buildVersion: UILabel!
+    @IBOutlet weak var viewTrophyCaseButton: CustomUIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             title = "Profile"
+       viewTrophyCaseButton.isHidden = true
+        
+        //build version text
         buildVersion.text = "App Version: " + String(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "-.--")
        
         let user = Auth.auth().currentUser

@@ -207,6 +207,7 @@
                         <outlet property="challengeTwoImg" destination="57B-RB-AOL" id="ECL-jH-akt"/>
                         <outlet property="challengeTwoLabel" destination="9yY-cs-4FT" id="uNS-KF-C26"/>
                         <outlet property="challengeTwoProgress" destination="Ufy-A7-6Up" id="pev-Xd-2o1"/>
+                        <outlet property="viewTrophyCaseButton" destination="rWK-Ve-e9U" id="yVl-CD-Z5C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CzH-Rc-boe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -20,6 +20,7 @@ class ChallengesViewController: UIViewController {
     @IBOutlet weak var challengeOneImg: UIImageView!
     @IBOutlet weak var challengeTwoImg: UIImageView!
     @IBOutlet weak var challengeThreeImg: UIImageView!
+    @IBOutlet weak var viewTrophyCaseButton: CustomUIButton!
     
     var AllTimePushup = 0
     var AllTimePushupTime = 0
@@ -35,7 +36,7 @@ class ChallengesViewController: UIViewController {
         let user = Auth.auth().currentUser //Get current User
         let uid = user?.uid ?? " " //Get current users UID
         callFirebaseForChallenge()
-
+        viewTrophyCaseButton.isHidden = true
 
     }
     func callFirebaseForChallenge() {

@@ -1,7 +1,10 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    var alphabet = ["A","B","C","D","E","F","G","H","I"]
+    var alphabet = ["100 Pushups All-Time",
+                    "1k Pushups All-Time",
+                    "10k Pushups All-Time",
+                    "D","E","F","G","H","I"]
     
     var isAscending = true
     
@@ -42,6 +45,7 @@ class TableViewController: UITableViewController {
         // 3
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = alphabet[indexPath.row]
+        
         
         return cell
     }

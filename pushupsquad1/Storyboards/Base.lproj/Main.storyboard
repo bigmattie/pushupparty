@@ -155,6 +155,7 @@
                         <outlet property="creationDateText" destination="rLy-AE-yvZ" id="RBP-SD-f92"/>
                         <outlet property="displayNameText" destination="Vdm-py-xjO" id="dtX-xi-4TL"/>
                         <outlet property="profieImage" destination="b19-PB-CaS" id="ofN-Q1-8p1"/>
+                        <outlet property="viewTrophyCaseButton" destination="9dR-12-qZQ" id="lAb-0A-L2b"/>
                         <segue destination="Qpb-NB-1Ey" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="K57-PX-57S"/>
                     </connections>
                 </viewController>
