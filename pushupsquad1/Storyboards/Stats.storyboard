@@ -747,6 +747,9 @@
                         <outlet property="mondayProgressStack" destination="xqg-Dw-BNL" id="RVV-jU-LUh"/>
                         <outlet property="mondayTotalLabel" destination="39A-PW-VKI" id="gAs-oK-Qya"/>
                         <outlet property="noPushupImg" destination="4bM-VU-oyY" id="E5o-em-bvu"/>
+                        <outlet property="noPushupsDescription" destination="yEd-LP-9Ie" id="TOd-6p-Xhw"/>
+                        <outlet property="noPushupsHeadline" destination="tW7-fK-m5b" id="ERn-aZ-bcm"/>
+                        <outlet property="noPushupsImageLeft" destination="tBy-iD-Dut" id="63o-pn-YyS"/>
                         <outlet property="recordPushupsLabelForBtn" destination="Z24-hP-YXe" id="Zva-XQ-QZW"/>
                         <outlet property="saturdayProgressBar" destination="h8k-JV-iQu" id="5Wf-rQ-h1o"/>
                         <outlet property="saturdayProgressStack" destination="2zn-TD-D5A" id="AFG-mS-4aT"/>
@@ -775,7 +778,7 @@
         <segue reference="hWJ-oI-5GK"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="smallcircle.circle.fill" catalog="system" width="32" height="32"/>
+        <image name="smallcircle.circle.fill" catalog="system" width="128" height="121"/>
         <image name="weeklyPushupImg2.PNG" width="600" height="600"/>
     </resources>
 </document>

@@ -37,6 +37,7 @@
 		191939B8246F54D4008FE2AE /* magenta.gif in Resources */ = {isa = PBXBuildFile; fileRef = 191939B7246F54D1008FE2AE /* magenta.gif */; };
 		195563AA2499B272000F4D87 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195563A92499B272000F4D87 /* TableViewController.swift */; };
 		195563AE2499CBF9000F4D87 /* trophy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195563AD2499CBF9000F4D87 /* trophy.storyboard */; };
+		195563B02499E660000F4D87 /* weeklyPushupImg3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 195563AF2499E65F000F4D87 /* weeklyPushupImg3.PNG */; };
 		196C5BB2247C5ADC0031A182 /* CustomUIButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */; };
 		196C5BB4247C6CBC0031A182 /* CustomProgessBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C5BB3247C6CBC0031A182 /* CustomProgessBar.swift */; };
 		196C5BB8247DD4620031A182 /* pushupDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 196C5BB7247DD45F0031A182 /* pushupDemo.gif */; };
@@ -44,7 +45,6 @@
 		197043662478868500305AAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 197043652478868500305AAE /* GoogleService-Info.plist */; };
 		19969F74248D550F00106AF6 /* noPushupTransparentImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 19969F73248D550F00106AF6 /* noPushupTransparentImg.PNG */; };
 		19969F76248D5AE500106AF6 /* ayePushups.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 19969F75248D5AE400106AF6 /* ayePushups.PNG */; };
-		19969F78248D5B7900106AF6 /* jinx.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 19969F77248D5B7900106AF6 /* jinx.PNG */; };
 		19969F7B24905FFC00106AF6 /* weeklyPushupImg.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 19969F7924905FFB00106AF6 /* weeklyPushupImg.PNG */; };
 		19969F7C24905FFC00106AF6 /* weeklyPushupImg2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 19969F7A24905FFB00106AF6 /* weeklyPushupImg2.PNG */; };
 		19969F7E24906AB700106AF6 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19969F7D24906AB700106AF6 /* Vibration.swift */; };
@@ -90,6 +90,7 @@
 		191939B7246F54D1008FE2AE /* magenta.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = magenta.gif; path = ../../magenta.gif; sourceTree = "<group>"; };
 		195563A92499B272000F4D87 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		195563AD2499CBF9000F4D87 /* trophy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = trophy.storyboard; sourceTree = "<group>"; };
+		195563AF2499E65F000F4D87 /* weeklyPushupImg3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weeklyPushupImg3.PNG; path = ../../weeklyPushupImg3.PNG; sourceTree = "<group>"; };
 		196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButtom.swift; sourceTree = "<group>"; };
 		196C5BB3247C6CBC0031A182 /* CustomProgessBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgessBar.swift; sourceTree = "<group>"; };
 		196C5BB7247DD45F0031A182 /* pushupDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pushupDemo.gif; path = ../../pushupDemo.gif; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		197043652478868500305AAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19969F73248D550F00106AF6 /* noPushupTransparentImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noPushupTransparentImg.PNG; path = ../../noPushupTransparentImg.PNG; sourceTree = "<group>"; };
 		19969F75248D5AE400106AF6 /* ayePushups.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ayePushups.PNG; path = ../../ayePushups.PNG; sourceTree = "<group>"; };
-		19969F77248D5B7900106AF6 /* jinx.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jinx.PNG; path = ../../jinx.PNG; sourceTree = "<group>"; };
 		19969F7924905FFB00106AF6 /* weeklyPushupImg.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weeklyPushupImg.PNG; path = ../../weeklyPushupImg.PNG; sourceTree = "<group>"; };
 		19969F7A24905FFB00106AF6 /* weeklyPushupImg2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weeklyPushupImg2.PNG; path = ../../weeklyPushupImg2.PNG; sourceTree = "<group>"; };
 		19969F7D24906AB700106AF6 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
@@ -155,10 +155,10 @@
 			children = (
 				19969F73248D550F00106AF6 /* noPushupTransparentImg.PNG */,
 				19969F75248D5AE400106AF6 /* ayePushups.PNG */,
-				19969F77248D5B7900106AF6 /* jinx.PNG */,
+				195563AF2499E65F000F4D87 /* weeklyPushupImg3.PNG */,
 				1908B7FF24808C0900E37069 /* Pushup Party.entitlements */,
-				196C5BAE247C3A180031A182 /* Custom Classes */,
 				196C5BB1247C5ADC0031A182 /* CustomUIButtom.swift */,
+				196C5BAE247C3A180031A182 /* Custom Classes */,
 				191939B1246F4A0B008FE2AE /* Storyboards */,
 				191939B0246F49DE008FE2AE /* Custom Extensions */,
 				191939A8246F07D9008FE2AE /* 338F904C-67B0-4C56-B501-2929B97B2FA5.PNG */,
@@ -212,8 +212,8 @@
 				191939A6246E21E8008FE2AE /* Stats.storyboard */,
 				1908B7F7247F0C8E00E37069 /* StatsView.storyboard */,
 				1919399B246C7991008FE2AE /* PushupCounter.storyboard */,
-				19193996246B3FFE008FE2AE /* DateExtensions.swift */,
 				190A41F9245E121B009A9C79 /* LaunchScreen.storyboard */,
+				19193996246B3FFE008FE2AE /* DateExtensions.swift */,
 				191939A1246E1B90008FE2AE /* Challenges.storyboard */,
 				195563AD2499CBF9000F4D87 /* trophy.storyboard */,
 			);
@@ -304,7 +304,6 @@
 				195563AE2499CBF9000F4D87 /* trophy.storyboard in Resources */,
 				191939A7246E21E9008FE2AE /* Stats.storyboard in Resources */,
 				19CAF01B24834775004F8862 /* n.JPG in Resources */,
-				19969F78248D5B7900106AF6 /* jinx.PNG in Resources */,
 				191939A3246E1B91008FE2AE /* Challenges.storyboard in Resources */,
 				1908B80B2480ECC500E37069 /* apple.png in Resources */,
 				1919399C246C7992008FE2AE /* PushupCounter.storyboard in Resources */,
@@ -312,6 +311,7 @@
 				196C5BB8247DD4620031A182 /* pushupDemo.gif in Resources */,
 				191939A0246CDAFF008FE2AE /* 149-1491934_fitness-test-women-working-out-black-and-white.png in Resources */,
 				1908B7F8247F0C8E00E37069 /* StatsView.storyboard in Resources */,
+				195563B02499E660000F4D87 /* weeklyPushupImg3.PNG in Resources */,
 				19969F76248D5AE500106AF6 /* ayePushups.PNG in Resources */,
 				19193995246A3478008FE2AE /* confetti.png in Resources */,
 				191939B8246F54D4008FE2AE /* magenta.gif in Resources */,
