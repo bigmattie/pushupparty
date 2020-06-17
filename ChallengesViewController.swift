@@ -36,6 +36,7 @@ class ChallengesViewController: UIViewController {
         let uid = user?.uid ?? " " //Get current users UID
         callFirebaseForChallenge()
 
+
     }
     func callFirebaseForChallenge() {
                 db.collection("users").document(Auth.auth().currentUser?.uid ?? " ").collection("sessions").addSnapshotListener { (querySnapshot, err) in

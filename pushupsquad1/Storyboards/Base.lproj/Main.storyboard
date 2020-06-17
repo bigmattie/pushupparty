@@ -7,15 +7,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="vpq-6w-qGf">
             <objects>
-                <tabBarController storyboardIdentifier="hometabs" id="ihj-av-5L9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="hometabs" id="ihj-av-5L9" customClass="TabViewController" customModule="Pushup_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="NP5-g4-VCD"/>
-                    <tabBar key="tabBar" alpha="0.59999999999999998" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p7Z-o0-GPq">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="p7Z-o0-GPq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -70,7 +70,7 @@
             <objects>
                 <viewController id="3uH-bp-mwm" customClass="ProfileViewController" customModule="Pushup_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0b-kp-c9V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b19-PB-CaS">
@@ -108,16 +108,33 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-12-qZQ" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
+                                <rect key="frame" x="20" y="289" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5sv-RE-kef"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="  View Trophy Case" image="rectangle.fill.on.rectangle.angled.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n2C-ST-P9M" kind="show" id="Ngl-WL-oqb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="rAc-vP-YGg" firstAttribute="trailing" secondItem="rLy-AE-yvZ" secondAttribute="trailing" constant="20" id="3qI-FU-8ta"/>
+                            <constraint firstItem="9dR-12-qZQ" firstAttribute="top" secondItem="OPM-Wz-PIZ" secondAttribute="bottom" constant="20" id="At6-Vo-j2J"/>
                             <constraint firstItem="Vdm-py-xjO" firstAttribute="top" secondItem="rAc-vP-YGg" secondAttribute="top" constant="25" id="DFn-va-KPJ"/>
                             <constraint firstItem="OPM-Wz-PIZ" firstAttribute="leading" secondItem="rAc-vP-YGg" secondAttribute="leading" constant="20" id="H5j-vM-jfJ"/>
                             <constraint firstItem="Vdm-py-xjO" firstAttribute="leading" secondItem="b19-PB-CaS" secondAttribute="trailing" constant="20" id="JAW-Ni-UYe"/>
                             <constraint firstItem="OPM-Wz-PIZ" firstAttribute="top" secondItem="rLy-AE-yvZ" secondAttribute="bottom" constant="30" id="RG1-hY-q9d"/>
                             <constraint firstItem="b19-PB-CaS" firstAttribute="leading" secondItem="rAc-vP-YGg" secondAttribute="leading" constant="20" id="Rlj-M9-IUc"/>
                             <constraint firstItem="rAc-vP-YGg" firstAttribute="trailing" secondItem="Vdm-py-xjO" secondAttribute="trailing" constant="20" id="UCU-DV-p1G"/>
+                            <constraint firstItem="rAc-vP-YGg" firstAttribute="trailing" secondItem="9dR-12-qZQ" secondAttribute="trailing" constant="20" id="YWH-Sv-tgs"/>
+                            <constraint firstItem="9dR-12-qZQ" firstAttribute="leading" secondItem="rAc-vP-YGg" secondAttribute="leading" constant="20" id="fCi-xB-914"/>
                             <constraint firstItem="rLy-AE-yvZ" firstAttribute="leading" secondItem="b19-PB-CaS" secondAttribute="trailing" constant="20" id="hs7-YM-g3O"/>
                             <constraint firstItem="b19-PB-CaS" firstAttribute="top" secondItem="rAc-vP-YGg" secondAttribute="top" constant="27" id="iY4-S4-4ku"/>
                             <constraint firstItem="rLy-AE-yvZ" firstAttribute="top" secondItem="Vdm-py-xjO" secondAttribute="bottom" constant="2" id="lrF-fM-K9m"/>
@@ -316,13 +333,24 @@
             </objects>
             <point key="canvasLocation" x="-943.47826086956525" y="930.80357142857133"/>
         </scene>
+        <!--trophy-->
+        <scene sceneID="Cky-D0-Wgc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="trophy" id="n2C-ST-P9M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jDX-SW-rll"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wu-EA-X1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="1109"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
         <image name="facebook-7-24" width="24" height="24"/>
         <image name="n.JPG" width="1241" height="715"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="rectangle.fill.on.rectangle.angled.fill" catalog="system" width="128" height="101"/>
         <image name="rosette" catalog="system" width="100" height="128"/>
-        <image name="smallcircle.circle.fill" catalog="system" width="32" height="32"/>
+        <image name="smallcircle.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

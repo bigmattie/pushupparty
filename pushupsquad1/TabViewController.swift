@@ -7,13 +7,43 @@
 //
 
 import UIKit
+import UserNotifications
 
-class TabViewController: UIViewController {
-
+class TabViewController: UITabBarController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tabBar.isHidden = false
         // Do any additional setup after loading the view.
+        
+        //Enable Notifications
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+
+            // If granted comes true you can enabled features based on authorization.
+            guard granted else { return }
+            // tell the user how to enable notifications TODO
+            
+            
+        }
+        UNUserNotificationCenter.current().getNotificationSettings(){ (setttings) in
+
+            switch setttings.soundSetting{
+            case .enabled:
+               
+                print("enabled sound")
+                print(setttings.authorizationStatus)
+
+            case .disabled:
+                print("not allowed notifications")
+
+            case .notSupported:
+                print("something went wrong here")
+            default:
+                print("unknown")
+            }
+        }
     }
     
 

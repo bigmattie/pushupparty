@@ -176,7 +176,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedBrowseDaily:" destination="BE4-3N-6xl" eventType="touchUpInside" id="AGg-Oi-kSi"/>
-                                    <segue destination="gUa-iM-YXG" kind="show" id="Tem-VG-wRU"/>
+                                    <segue destination="KLw-DY-0Ci" kind="show" id="Tem-VG-wRU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,6 +212,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CzH-Rc-boe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-381.15942028985512" y="921.42857142857133"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="hv5-5n-cN6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwZ-4p-Gjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="KLw-DY-0Ci" customClass="TableViewController" customModule="Pushup_Party" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1xZ-Yb-oSl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.22713589670000001" green="0.68282419439999997" blue="0.25051712990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.22713589670000001" green="0.68282419439999997" blue="0.25051712990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tMp-7s-Z2Y">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tMp-7s-Z2Y" id="5kS-eP-Cq8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KLw-DY-0Ci" id="MEj-W1-pYg"/>
+                            <outlet property="delegate" destination="KLw-DY-0Ci" id="H2o-8h-RNw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="g41-Gj-v47"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="371" y="791"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="1bS-pj-YdH">
@@ -260,16 +294,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0y-3B-ttk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1089.8550724637682" y="943.52678571428567"/>
-        </scene>
-        <!--trophy-->
-        <scene sceneID="nDz-9c-T8d">
-            <objects>
-                <viewControllerPlaceholder storyboardName="trophy" id="gUa-iM-YXG" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5BP-pE-axo"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EJc-Lr-0rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="371" y="791"/>
         </scene>
     </scenes>
     <resources>

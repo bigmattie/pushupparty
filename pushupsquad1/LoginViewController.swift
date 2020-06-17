@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
       return hashString
     }
     
+
     @IBOutlet weak var headlineText: UILabel!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet var mainView: UIView!
@@ -73,7 +74,6 @@ class LoginViewController: UIViewController {
         
 
        // #endif
-        
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in //listen for state chang on auth
                   if user == nil {
                     //if no user object do nothing which means we dont have an active session
@@ -211,8 +211,7 @@ class LoginViewController: UIViewController {
         self.loadView() //refreshs view
     }
     @IBAction func guestLogin(_ sender: Any) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+        Vibrator.success()
         showLoading(status: true)
         showGuestLoginActionSheet()
         
@@ -220,6 +219,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func facebookLogin(_ sender: Any) {
+        Vibrator.success()
         showLoading(status: true)
         LoginManager().logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
           if let error = error {
@@ -258,6 +258,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func appleLogin(_ sender: Any) {
+        Vibrator.success()
         showLoading(status: true)
         print("Apple Login")
         handleAuthorizationAppleIDButtonPress()

@@ -419,7 +419,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4bM-VU-oyY" userLabel="NoPushup">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="184"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jinx.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-iD-Dut">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weeklyPushupImg2.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="tBy-iD-Dut">
                                                         <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="184"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="184" id="9T5-6e-AtN"/>
@@ -445,7 +445,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuZ-eQ-2yy" customClass="CustomUIButton" customModule="Pushup_Party" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="194" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="244" width="374" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ouW-iq-2ZA"/>
@@ -455,17 +455,18 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="recordPushupsBtn:" destination="Iza-bd-pFQ" eventType="touchUpInside" id="mUg-di-Rjx"/>
                                                     <segue destination="4dM-6Q-5kz" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="hWJ-oI-5GK"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count pushups with the automated counter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z24-hP-YXe">
-                                                <rect key="frame" x="60.333333333333343" y="254" width="293.66666666666663" height="18"/>
+                                                <rect key="frame" x="60.333333333333343" y="391.33333333333331" width="293.66666666666663" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-bt-Ny7">
-                                                <rect key="frame" x="155" y="377" width="104" height="26.333333333333314"/>
+                                                <rect key="frame" x="155" y="419.33333333333331" width="104" height="26.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -699,13 +700,14 @@
                                             <constraint firstItem="HtJ-qS-8rt" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="Fo2-sy-0EV"/>
                                             <constraint firstAttribute="trailing" secondItem="vK4-Xp-elP" secondAttribute="trailing" constant="20" id="FpO-ue-tbL"/>
                                             <constraint firstItem="xqg-Dw-BNL" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="HcM-ve-Oyj"/>
+                                            <constraint firstItem="GuZ-eQ-2yy" firstAttribute="top" secondItem="4bM-VU-oyY" secondAttribute="bottom" constant="60" id="Mxh-8Q-leS"/>
                                             <constraint firstAttribute="trailing" secondItem="HtJ-qS-8rt" secondAttribute="trailing" constant="20" id="Oyr-l0-Ft5"/>
                                             <constraint firstAttribute="trailing" secondItem="4bM-VU-oyY" secondAttribute="trailing" constant="20" id="ReA-vK-6sK"/>
                                             <constraint firstAttribute="trailing" secondItem="xqg-Dw-BNL" secondAttribute="trailing" constant="20" id="ajp-Rs-kEn"/>
                                             <constraint firstItem="vK4-Xp-elP" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="cY0-65-ItV"/>
+                                            <constraint firstItem="4bM-VU-oyY" firstAttribute="top" secondItem="mex-dR-DoL" secondAttribute="top" constant="20" id="d7S-8T-vxa"/>
                                             <constraint firstItem="ZNb-hC-Gym" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="dWh-gG-Jo5"/>
                                             <constraint firstAttribute="trailing" secondItem="ZNb-hC-Gym" secondAttribute="trailing" constant="20" id="fm3-nT-za4"/>
-                                            <constraint firstItem="Z24-hP-YXe" firstAttribute="top" secondItem="GuZ-eQ-2yy" secondAttribute="bottom" constant="10" id="hQi-4q-mMn"/>
                                             <constraint firstItem="e8k-Jt-Xx2" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="kBI-Gd-aUN"/>
                                             <constraint firstAttribute="trailing" secondItem="2zn-TD-D5A" secondAttribute="trailing" constant="20" id="pYe-8Z-9OT"/>
                                             <constraint firstItem="4bM-VU-oyY" firstAttribute="leading" secondItem="mex-dR-DoL" secondAttribute="leading" constant="20" id="peV-Ja-XyM"/>
@@ -745,6 +747,7 @@
                         <outlet property="mondayProgressStack" destination="xqg-Dw-BNL" id="RVV-jU-LUh"/>
                         <outlet property="mondayTotalLabel" destination="39A-PW-VKI" id="gAs-oK-Qya"/>
                         <outlet property="noPushupImg" destination="4bM-VU-oyY" id="E5o-em-bvu"/>
+                        <outlet property="recordPushupsLabelForBtn" destination="Z24-hP-YXe" id="Zva-XQ-QZW"/>
                         <outlet property="saturdayProgressBar" destination="h8k-JV-iQu" id="5Wf-rQ-h1o"/>
                         <outlet property="saturdayProgressStack" destination="2zn-TD-D5A" id="AFG-mS-4aT"/>
                         <outlet property="saturdayTotalLabel" destination="Y7Z-5y-1AO" id="vxq-aK-5cu"/>
@@ -772,7 +775,7 @@
         <segue reference="hWJ-oI-5GK"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="jinx.PNG" width="800" height="800"/>
         <image name="smallcircle.circle.fill" catalog="system" width="32" height="32"/>
+        <image name="weeklyPushupImg2.PNG" width="600" height="600"/>
     </resources>
 </document>

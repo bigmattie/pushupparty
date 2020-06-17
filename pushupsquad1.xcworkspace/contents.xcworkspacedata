@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Stats.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:pushupsquad1/Base.lproj/Challenges.storyboard">
    </FileRef>
    <FileRef

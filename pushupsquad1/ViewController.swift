@@ -173,17 +173,18 @@ class ViewController: UIViewController {
             }
         }
         setConfettiBackground()
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-
+//        let generator = UINotificationFeedbackGenerator()
+//        generator.notificationOccurred(.success)
+        Vibrator.success()
         
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {
         UIDevice.current.isProximityMonitoringEnabled = false
         NotificationCenter.default.removeObserver(self, name: UIDevice.proximityStateDidChangeNotification, object: nil)
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+//        let generator = UINotificationFeedbackGenerator()
+//        generator.notificationOccurred(.success)
+        Vibrator.success()
         dismiss(animated: true, completion: nil)
     }
     //Help Button
@@ -192,6 +193,8 @@ class ViewController: UIViewController {
 //        let alert = UIAlertController(title: "How does it work?", message: "Place your phone under your chest, press start, then perform a pushup", preferredStyle: .alert)
 //        alert.addAction(UIAlertAction(title: "Okay", style:.cancel, handler: nil))
 //        self.present(alert, animated: true)
+        Vibrator.success()
+        Vibrator.light()
     }
     
     //Segemented Controls (Pushup Options)
